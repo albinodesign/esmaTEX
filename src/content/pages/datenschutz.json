@@ -1,0 +1,67 @@
+{
+  "page": "datenschutz",
+  "meta": {
+    "title": "Datenschutzerklärung – esmaTEX Stadthagen",
+    "description": "Datenschutzerklärung von esmaTEX, Stadthagen: Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO – ohne Tracking und ohne externe Analyse-Tools."
+  },
+  "header": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Informationen zur Verarbeitung personenbezogener Daten · Stand: September 2026"
+  },
+  "controllerSection": {
+    "title": "1. Verantwortliche Stelle",
+    "text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail"
+  },
+  "sections": [
+    {
+      "title": "2. Hosting dieser Website",
+      "paragraphs": [
+        "Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, gehostet. Beim Aufruf der Website werden durch den Hosting-Anbieter automatisch Informationen in sogenannten Server-Log-Dateien gespeichert (z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, Browsertyp). Diese Daten sind technisch erforderlich, um die Website auszuliefern und die Systemsicherheit zu gewährleisten.",
+        "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Betrieb der Website). Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung; für die Übermittlung in die USA werden Standardvertragsklauseln verwendet."
+      ]
+    },
+    {
+      "title": "3. Kontaktformular und E-Mail-Kontakt",
+      "paragraphs": [
+        "Wenn du uns per Kontaktformular oder E-Mail Anfragen zukommen lässt, werden deine Angaben (Name, E-Mail-Adresse, ggf. Telefonnummer, gewünschter Leistungsbereich, Stückzahl und Nachricht) zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.",
+        "Für die technische Übermittlung des Formulars nutzen wir den Dienst Web3Forms (Web3Forms, Anbieter: Web3Forms Inc.). Die Daten werden ausschließlich zur Zustellung deiner Nachricht an uns verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO. Deine Daten geben wir nicht ohne deine Einwilligung weiter."
+      ]
+    },
+    {
+      "title": "4. Cookies und lokale Speicherung",
+      "paragraphs": [
+        "Diese Website verwendet keine Tracking-Cookies. Lediglich deine Einwilligungsauswahl im Cookie-Hinweis wird technisch notwendig im lokalen Speicher (localStorage) deines Browsers abgelegt, damit der Hinweis nicht bei jedem Besuch erneut erscheint. Dabei werden keine Daten an Dritte übertragen.",
+        "Du kannst die gespeicherte Auswahl jederzeit über die Browsereinstellungen löschen; der Hinweis wird dir dann erneut angezeigt."
+      ]
+    },
+    {
+      "title": "5. Analyse- und Tracking-Tools",
+      "paragraphs": [
+        "Diese Website nutzt bewusst keine Analyse-, Tracking- oder Marketing-Tools (z. B. Google Analytics) und lädt keine externen Schriftarten, Skripte oder Inhalte von Drittanbieter-CDNs. Alle Ressourcen werden lokal von dieser Domain ausgeliefert."
+      ]
+    },
+    {
+      "title": "6. Deine Rechte",
+      "paragraphs": [
+        "Du hast gegenüber uns folgende Rechte hinsichtlich der dich betreffenden personenbezogenen Daten:"
+      ],
+      "list": [
+        "Recht auf Auskunft (Art. 15 DSGVO)",
+        "Recht auf Berichtigung (Art. 16 DSGVO)",
+        "Recht auf Löschung (Art. 17 DSGVO)",
+        "Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+        "Recht auf Datenübertragbarkeit (Art. 20 DSGVO)",
+        "Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+        "Recht auf Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)"
+      ]
+    },
+    {
+      "title": "7. Beschwerderecht bei der Aufsichtsbehörde",
+      "paragraphs": [
+        "Im Falle datenschutzrechtlicher Verstöße steht dir ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde ist die Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover."
+      ]
+    }
+  ]
+}

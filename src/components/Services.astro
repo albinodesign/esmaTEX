@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import NeedleIcon from './icons/NeedleIcon.astro';
+import PrintIcon from './icons/PrintIcon.astro';
+import TruckIcon from './icons/TruckIcon.astro';
+import ShirtIcon from './icons/ShirtIcon.astro';
+import CheckIcon from './icons/CheckIcon.astro';
+import ArrowRightIcon from './icons/ArrowRightIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  services: IndexData['services'];
+}
+
+const { services } = Astro.props;
+
+const iconMap = {
+  needle: NeedleIcon,
+  print: PrintIcon,
+  truck: TruckIcon,
+  shirt: ShirtIcon
+} as const;
+---
+
+<section id="leistungen" data-cms-section="services" class="py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow={services.eyebrow}
+      title={services.title}
+      subtitle={services.subtitle}
+      fieldPrefix="services"
+    />
+    <div class="mt-14 grid gap-8 md:grid-cols-2">
+      {
+        services.items.map((item, i) => {
+          const Icon =
+            iconMap[item.icon as keyof typeof iconMap] ?? NeedleIcon;
+          return (
+            <article
+              class="group flex flex-col overflow-hidden rounded-3xl bg-surface ring-1 ring-slate-200 transition hover:shadow-xl hover:ring-primary/60"
+              data-animate
+              data-animate-delay={String((i % 2) * 120)}
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  data-cms-field={`services.items.${i}.image.src`}
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                  class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-7">
+                <div class="flex items-center gap-3">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary-dark">
+                    <Icon class="h-6 w-6" />
+                  </span>
+                  <h3 data-cms-field={`services.items.${i}.title`} class="text-xl">
+                    {item.title}
+                  </h3>
+                </div>
+                <p
+                  data-cms-field={`services.items.${i}.description`}
+                  class="mt-4 leading-relaxed text-muted"
+                >
+                  {item.description}
+                </p>
+                <ul class="mt-5 space-y-2.5">
+                  {item.benefits.map((benefit, j) => (
+                    <li class="flex items-start gap-2.5 text-sm text-ink">
+                      <CheckIcon class="mt-0.5 h-4 w-4 shrink-0 text-primary-dark" />
+                      <span data-cms-field={`services.items.${i}.benefits.${j}`}>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={item.linkHref}
+                  class="mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-primary-dark transition hover:gap-3"
+                >
+                  <span data-cms-field={`services.items.${i}.linkLabel`}>{item.linkLabel}</span>
+                  <ArrowRightIcon class="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>

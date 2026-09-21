@@ -1,0 +1,350 @@
+{
+  "page": "index",
+  "meta": {
+    "title": "esmaTEX Stadthagen – Textilveredelung, Stickerei & Werbetechnik",
+    "description": "esmaTEX in Stadthagen: hochwertige Textilveredelung, Stickerei, Textildruck und Werbetechnik für Firmen, Vereine und Handwerk im Schaumburger Land. Qualität die überzeugt."
+  },
+  "hero": {
+    "eyebrow": "Textilveredelung & Werbetechnik in Stadthagen",
+    "title": "Deine Marke. Sichtbar veredelt.",
+    "subtitle": "esmaTEX veredelt Arbeitskleidung, Vereinsbedarf und Werbetextilien – mit feiner Stickerei, brillantem Textildruck und Werbetechnik, die im Schaumburger Land auffällt. Persönlich, zuverlässig, direkt vor Ort.",
+    "usps": [
+      "Express-Fertigung möglich",
+      "Keine Mindestbestellmenge",
+      "Persönliche Beratung vor Ort"
+    ],
+    "primaryCta": { "label": "Jetzt unverbindlich anfragen", "href": "#kontakt" },
+    "secondaryCta": { "label": "Muster & Leistungen ansehen", "href": "#leistungen" },
+    "image": {
+      "src": "/images/hero.webp",
+      "alt": "Bestickte esmaTEX Firmenjacke im Atelier in Stadthagen"
+    },
+    "badge": {
+      "title": "Meisterhafte Stickerei",
+      "text": "& langlebiger Textildruck"
+    }
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "100",
+        "suffix": " %",
+        "label": "Qualitätssicherung",
+        "description": "Jedes Textil wird vor der Übergabe einzeln geprüft"
+      },
+      {
+        "value": "500",
+        "suffix": "+",
+        "label": "Realisierte Projekte",
+        "description": "Für Firmen, Vereine und Handwerksbetriebe der Region"
+      },
+      {
+        "value": "0",
+        "suffix": " €",
+        "label": "Vektordatei-Check",
+        "description": "Wir prüfen deine Druck- und Stickdaten kostenfrei"
+      },
+      {
+        "value": "1:1",
+        "suffix": "",
+        "label": "Persönliche Beratung",
+        "description": "Direkt in der Bahnhofstr. 65 in Stadthagen"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Unsere Leistungen",
+    "title": "Alles für deinen professionellen Auftritt",
+    "subtitle": "Von der einzelnen Polo bis zur kompletten Firmenausstattung: Wir veredeln Textilien und Flächen mit Präzision – abgestimmt auf dein Budget und deinen Einsatzbereich.",
+    "items": [
+      {
+        "icon": "needle",
+        "title": "Textil-Stickerei",
+        "description": "Edle, extrem strapazierfähige Veredelung für Polos, Hemden, Jacken und Caps – mit feinstem Garn und präziser Sticktechnik für einen hochwertigen Business-Look.",
+        "benefits": [
+          "Extrem langlebig & farbecht",
+          "Hochwertige, fühlbare Haptik",
+          "Ideal für Logos auf Polo, Hemd & Cap"
+        ],
+        "image": {
+          "src": "/images/leistung1.webp",
+          "alt": "Stickmaschine stickt ein Logo auf ein dunkles Poloshirt"
+        },
+        "linkLabel": "Stickerei anfragen",
+        "linkHref": "#kontakt"
+      },
+      {
+        "icon": "print",
+        "title": "Moderner Textildruck (DTF & Siebdruck)",
+        "description": "Farbbrillanter Druck für T-Shirts, Hoodies und Sportbekleidung – von der Einzelanfertigung bis zur Großauflage, gestochen scharf und waschbeständig.",
+        "benefits": [
+          "Brillante Farben & feine Details",
+          "Waschbeständig – je nach Verfahren bis 60 °C",
+          "Schon ab 1 Stück möglich"
+        ],
+        "image": {
+          "src": "/images/leistung2.webp",
+          "alt": "Weißes T-Shirt mit frischem Farbdruck unter der Druckpresse"
+        },
+        "linkLabel": "Textildruck anfragen",
+        "linkHref": "#kontakt"
+      },
+      {
+        "icon": "truck",
+        "title": "Werbetechnik & Fahrzeugbeschriftung",
+        "description": "Mobile Außenwerbung für deinen Fuhrpark sowie Schaufenster, Schilder und Banner – wetterfest foliert und sauber montiert, direkt in Stadthagen.",
+        "benefits": [
+          "Wetterfeste Hochleistungsfolien",
+          "Sichtbarkeit auf jedem Einsatzfahrzeug",
+          "Montage direkt vor Ort in Stadthagen"
+        ],
+        "image": {
+          "src": "/images/leistung3.webp",
+          "alt": "Folierung eines weißen Firmen-Transporters in der Werkhalle"
+        },
+        "linkLabel": "Werbetechnik anfragen",
+        "linkHref": "#kontakt"
+      },
+      {
+        "icon": "shirt",
+        "title": "Corporate Wear & Vereinsausstattung",
+        "description": "Komplettpakete für Firmen und Vereine im Schaumburger Land – von der Arbeitsjacke bis zum Trikotsatz, inklusive Beratung zu Textil und Veredelung.",
+        "benefits": [
+          "Komplettpakete aus einer Hand",
+          "Wiederbestellung jederzeit möglich",
+          "Beratung zu Textil, Passform & Veredelung"
+        ],
+        "image": {
+          "src": "/images/leistung4.webp",
+          "alt": "Team in einheitlicher dunkler Firmenkleidung mit Logo-Stickerei"
+        },
+        "linkLabel": "Ausstattung anfragen",
+        "linkHref": "#kontakt"
+      }
+    ]
+  },
+  "partner": {
+    "eyebrow": "Starke Partnerschaft",
+    "title": "Sportswear von Sport Wilkening – veredelt von esmaTEX",
+    "text": "Sport- und Vereinstextilien beziehen wir von unserem Partner Sport Wilkening. Bei uns in Stadthagen veredeln wir sie mit Vereinswappen, Sponsoren-Logos, Namen und Nummern – hochwertig, haltbar und alles aus einer Hand.",
+    "linkLabel": "sport-wilkening.de besuchen",
+    "linkHref": "https://sport-wilkening.de/"
+  },
+  "comparison": {
+    "eyebrow": "Verfahrensvergleich",
+    "title": "Stick, Druck oder Folie – was passt zu deinem Projekt?",
+    "subtitle": "Unsere ehrliche Entscheidungshilfe für Einkäufer, Vereinsvorstände und Inhaber:innen – damit du genau das Verfahren bekommst, das zu Textil, Budget und Einsatz passt.",
+    "columns": ["Kriterium", "Stickerei", "Textildruck (DTF & Siebdruck)", "Werbetechnik & Folie"],
+    "rows": [
+      {
+        "label": "Einsatzbereich",
+        "values": [
+          "Polos, Hemden, Jacken, Caps",
+          "T-Shirts, Hoodies, Sportswear",
+          "Fahrzeuge, Schilder, Schaufenster"
+        ]
+      },
+      {
+        "label": "Waschbarkeit & Beständigkeit",
+        "values": [
+          "Sehr hoch – bis 95 °C waschbar",
+          "Hoch – je nach Verfahren 40–60 °C",
+          "Nicht waschbar – wetterfest bis ca. 7 Jahre"
+        ]
+      },
+      {
+        "label": "Haptik & Optik",
+        "values": [
+          "Edel, spürbar strukturiert",
+          "Glatt bis leicht spürbar, farbbrillant",
+          "Glatte, satte Folienoberfläche"
+        ]
+      },
+      {
+        "label": "Optimale Stückzahl",
+        "values": [
+          "Ab 1 Stück, ideal bei 10–500",
+          "Ab 1 Stück (DTF), Siebdruck ab ca. 20",
+          "Individuell pro Fahrzeug oder Fläche"
+        ]
+      },
+      {
+        "label": "Preisgefüge",
+        "values": [
+          "Premium – edelster Eindruck",
+          "Sehr wirtschaftlich bei Auflage",
+          "Nach Fläche und Folientyp kalkuliert"
+        ]
+      }
+    ],
+    "note": "Unsicher, welches Verfahren passt? Wir erstellen dir auf Wunsch ein kostenloses Muster deines Logos auf dem Wunschtextil."
+  },
+  "process": {
+    "eyebrow": "So einfach geht's",
+    "title": "In 3 Schritten zur fertigen Veredelung",
+    "subtitle": "Transparent und ohne Risiko: Du gibst erst frei, wenn alles perfekt aussieht. Produziert wird lokal in Stadthagen.",
+    "steps": [
+      {
+        "title": "Anfrage & Textilauswahl",
+        "text": "Schick uns dein Logo und deine Wunschtextilien – oder wähle aus über 1.000 Textilien führender Marken. Wir beraten dich persönlich zu Stoff, Farbe und Veredelung."
+      },
+      {
+        "title": "Kostenloser 1:1-Freigabeabzug",
+        "text": "Du erhältst eine digitale Vorschau deines Motivs im Originalmaßstab. Erst wenn du vollkommen zufrieden bist und freigibst, starten wir die Produktion."
+      },
+      {
+        "title": "Produktion & Übergabe",
+        "text": "Veredelt wird direkt in Stadthagen. Abholung in der Bahnhofstr. 65 oder versicherter Direktversand zu dir – auf Wunsch im Express."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Referenzen",
+    "title": "Aus unserem Atelier in Stadthagen",
+    "subtitle": "Ein Blick auf veredelte Textilien und Werbetechnik-Projekte, die wir für Kund:innen aus der Region umgesetzt haben.",
+    "items": [
+      {
+        "title": "Arbeitskleidung für Handwerksbetriebe",
+        "category": "Corporate Wear",
+        "image": {
+          "src": "/images/showcase-workwear.svg",
+          "alt": "Bestickte Arbeitsjacken für einen Handwerksbetrieb"
+        }
+      },
+      {
+        "title": "Sporttrikots & Vereinsbedarf",
+        "category": "Vereinsausstattung",
+        "image": {
+          "src": "/images/showcase-trikots.svg",
+          "alt": "Bedruckte Sporttrikots mit Rückennummer"
+        }
+      },
+      {
+        "title": "Fahrzeugbeschriftung für regionale Fuhrparks",
+        "category": "Werbetechnik",
+        "image": {
+          "src": "/images/showcase-fahrzeug.svg",
+          "alt": "Folierte Firmenbeschriftung auf einem Transporter"
+        }
+      },
+      {
+        "title": "Caps, Taschen & individuelle Werbemittel",
+        "category": "Werbemittel",
+        "image": {
+          "src": "/images/showcase-merch.svg",
+          "alt": "Bestickte Caps und bedruckte Stofftaschen"
+        }
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Kundenstimmen",
+    "title": "Das sagen Firmen und Vereine aus der Region",
+    "subtitle": "Vertrauen entsteht durch Ergebnisse – hier berichten Kund:innen aus Stadthagen und dem Schaumburger Land.",
+    "items": [
+      {
+        "quote": "Unsere neuen Poloshirts mit gesticktem Logo sind absolut hochwertig. Die Beratung war persönlich, der Freigabeabzug kam schnell – und das Ergebnis überzeugt das ganze Team.",
+        "author": "M. Thiele",
+        "role": "Inhaber eines Handwerksbetriebs",
+        "company": "Stadthagen",
+        "rating": 5
+      },
+      {
+        "quote": "Von der Trikotbeflockung bis zur Vereinsjacke: alles aus einer Hand, zu fairen Preisen und ohne lange Wartezeiten. Eine klare Empfehlung für jeden Verein.",
+        "author": "S. Brandt",
+        "role": "Vereinsvorsitz",
+        "company": "Sportverein im Schaumburger Land",
+        "rating": 5
+      },
+      {
+        "quote": "Die Beschriftung unseres Transporters wurde sauber und termingerecht umgesetzt. Kund:innen sprechen uns regelmäßig auf das Fahrzeug an – bessere Werbung gibt es nicht.",
+        "author": "A. Yilmaz",
+        "role": "Geschäftsführer eines Dienstleistungsbetriebs",
+        "company": "Region Hannover–Schaumburg",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Alles, was du vor der Anfrage wissen musst",
+    "subtitle": "Kurz beantwortet – damit du entspannt entscheiden kannst. Deine Frage fehlt? Ruf uns einfach an.",
+    "items": [
+      {
+        "question": "Welche Dateiformate benötigt ihr für mein Logo?",
+        "answer": "Ideal sind Vektordateien (AI, EPS, PDF oder SVG). Keine Sorge: Schick uns einfach das, was du hast – auch JPG oder PNG genügen für den Anfang. Wir prüfen deine Daten kostenfrei und bereiten sie für Stick oder Druck optimal auf."
+      },
+      {
+        "question": "Gibt es eine Mindestbestellmenge?",
+        "answer": "Nein. Dank moderner DTF-Technik und eigener Stickmaschinen fertigen wir bereits ab 1 Stück – vom einzelnen Musterpolo bis zur Großauflage für den kompletten Betrieb."
+      },
+      {
+        "question": "Wie waschbar sind Druck und Stickerei?",
+        "answer": "Stickerei ist extrem beständig und je nach Textil bis 95 °C waschbar. Drucke halten je nach Verfahren 40–60 °C. Zu jeder Lieferung erhältst du passende Pflegehinweise, damit deine Veredelung lange wie neu aussieht."
+      },
+      {
+        "question": "Kann ich Musterkleidung anprobieren?",
+        "answer": "Ja – in unserem Atelier in der Bahnhofstr. 65 in Stadthagen kannst du Textilien anfassen, Größen anprobieren und Veredelungsmuster in Ruhe vergleichen. Am besten vereinbarst du kurz einen Termin."
+      },
+      {
+        "question": "Wie lange dauert die Produktion?",
+        "answer": "In der Regel 5–10 Werktage nach deiner Freigabe. Eiliger Bedarf? Sprich uns an – Express-Fertigung ist je nach Auftrag möglich."
+      },
+      {
+        "question": "Könnt ihr auch bei der Logo-Gestaltung helfen?",
+        "answer": "Ja, Logo-Gestaltung gehört zu unseren Leistungen. Wir entwickeln oder modernisieren dein Logo und bereiten es direkt für Stick, Druck und Folie auf – alles aus einer Hand."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für deinen starken Markenauftritt?",
+    "text": "Hol dir jetzt dein unverbindliches Angebot – persönlich, transparent und ohne Wartezeit. Wir melden uns innerhalb von 24 Stunden bei dir.",
+    "primaryCta": { "label": "Jetzt unverbindliches Angebot einholen", "href": "#kontakt" },
+    "note": "Oder ruf direkt an – Ümmü Kaman berät dich persönlich."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Lass uns über dein Projekt sprechen",
+    "subtitle": "Ob einzelnes Polo oder komplette Firmenausstattung – schreib uns oder ruf direkt an. Wir antworten in der Regel innerhalb von 24 Stunden.",
+    "info": {
+      "title": "Dein direkter Draht zu uns",
+      "text": "Deine Ansprechpartnerin für alle Fragen rund um Textilveredelung, Stickerei und Werbetechnik:",
+      "personName": "Ümmü Kaman",
+      "personRole": "Inhaberin",
+      "addressLabel": "Adresse",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-Mail",
+      "hoursLabel": "Öffnungszeiten",
+      "hoursNote": "Termine außerhalb der Öffnungszeiten nach Vereinbarung möglich."
+    },
+    "anfahrt": {
+      "title": "Anfahrt",
+      "text": "Du findest unser Atelier in der Bahnhofstr. 65 in 31655 Stadthagen – nur wenige Gehminuten vom Bahnhof Stadthagen entfernt. Parkmöglichkeiten befinden sich in direkter Nähe."
+    }
+  },
+  "form": {
+    "title": "Angebot anfordern",
+    "subtitle": "Schildere uns kurz dein Vorhaben – wir melden uns mit einem passenden Angebot bei dir.",
+    "firstNameLabel": "Vorname",
+    "firstNamePlaceholder": "Max",
+    "lastNameLabel": "Nachname",
+    "lastNamePlaceholder": "Mustermann",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "max@firma.de",
+    "phoneLabel": "Telefon (optional)",
+    "phonePlaceholder": "05721 123456",
+    "serviceLabel": "Leistungsbereich",
+    "servicePlaceholder": "Bitte wählen",
+    "serviceOptions": ["Stickerei", "Textildruck", "Werbetechnik", "Sonstiges"],
+    "quantityLabel": "Geschätzte Stückzahl",
+    "quantityPlaceholder": "z. B. 25",
+    "messageLabel": "Deine Nachricht",
+    "messagePlaceholder": "Beschreibe kurz dein Projekt: Textil, Motiv, Wunschtermin …",
+    "privacyNote": "Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer Datenschutzerklärung zu.",
+    "submitLabel": "Anfrage senden",
+    "successTitle": "Vielen Dank für deine Anfrage!",
+    "successMessage": "Wir haben deine Nachricht erhalten und melden uns innerhalb von 24 Stunden bei dir.",
+    "errorMessage": "Leider ist ein Fehler aufgetreten. Bitte versuche es erneut oder ruf uns direkt an: 05721 898882.",
+    "emailSubject": "Neue Anfrage über esmatex.de"
+  }
+}

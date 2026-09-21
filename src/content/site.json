@@ -1,0 +1,81 @@
+{
+  "name": "esmaTEX",
+  "legalName": "esmaTEX – Ümmü Kaman",
+  "owner": "Ümmü Kaman",
+  "legalForm": "Einzelunternehmen",
+  "slogan": "Qualität die überzeugt",
+  "description": "esmaTEX in Stadthagen: Textilveredelung, Textildruck, Stickerei, Werbetechnik, Beschriftungen, Logo-Gestaltung und individuelle Werbemittel für Firmen, Vereine und Handwerk im Schaumburger Land.",
+  "vatId": "DE353978752",
+  "url": "https://www.esmatex.de",
+  "email": "info@esmatex.de",
+  "logo": "/images/logo.webp",
+  "phone": {
+    "display": "05721 898882",
+    "href": "tel:+495721898882",
+    "raw": "05721898882"
+  },
+  "address": {
+    "street": "Bahnhofstr. 65",
+    "zip": "31655",
+    "city": "Stadthagen",
+    "region": "Landkreis Schaumburg, Niedersachsen",
+    "country": "DE",
+    "countryName": "Deutschland",
+    "geo": {
+      "lat": 52.3298614,
+      "lng": 9.192776
+    }
+  },
+  "openingHours": [
+    { "days": "Montag – Freitag", "hours": "09:00 – 18:00 Uhr" },
+    { "days": "Samstag", "hours": "Nach Vereinbarung" },
+    { "days": "Sonntag", "hours": "Geschlossen" }
+  ],
+  "openingHoursSchema": ["Mo-Fr 09:00-18:00"],
+  "services": [
+    "Textilveredelung",
+    "Textildruck",
+    "Stickerei",
+    "Werbetechnik",
+    "Beschriftungen",
+    "Logo-Gestaltung",
+    "Individuelle Werbemittel"
+  ],
+  "areaServed": "Stadthagen & Schaumburger Land",
+  "social": [],
+  "navigation": {
+    "items": [
+      { "label": "Leistungen", "href": "/#leistungen" },
+      { "label": "Partner", "href": "/#partner" },
+      { "label": "Verfahren", "href": "/#verfahren" },
+      { "label": "Ablauf", "href": "/#ablauf" },
+      { "label": "Referenzen", "href": "/#referenzen" },
+      { "label": "Kontakt", "href": "/#kontakt" }
+    ],
+    "ctaLabel": "Angebot anfordern",
+    "ctaHref": "/#kontakt",
+    "menuOpenLabel": "Menü öffnen",
+    "menuCloseLabel": "Menü schließen"
+  },
+  "footer": {
+    "servicesTitle": "Leistungen",
+    "contactTitle": "Kontakt",
+    "legalTitle": "Rechtliches",
+    "legalLinks": [
+      { "label": "Impressum", "href": "/impressum" },
+      { "label": "Datenschutz", "href": "/datenschutz" }
+    ],
+    "copyrightNote": "Alle Rechte vorbehalten.",
+    "madeIn": "Textilveredelung & Werbetechnik aus Stadthagen"
+  },
+  "ui": {
+    "skipLink": "Zum Inhalt springen",
+    "cookieBanner": {
+      "title": "Deine Privatsphäre",
+      "text": "Wir nutzen ausschließlich technisch notwendige Speicherung für den Betrieb dieser Website. Optionale Dienste von Drittanbietern werden erst nach deiner ausdrücklichen Zustimmung geladen.",
+      "essentialLabel": "Nur essenzielle",
+      "acceptAllLabel": "Alle akzeptieren",
+      "privacyLinkLabel": "Datenschutzerklärung"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design-Tokens (RGB-Triplets für Tailwind <alpha-value>)
+ * #41A9E6 → 65 169 230  (Brand Cyan-Blue)
+ * #1F72A6 → 31 114 166  (Kontrast-sicheres Brand-Dunkel, Fließtext-Links auf Weiß ≥ 4.5:1)
+ * #0F172A → 15 23 42    (Dark Slate, Primärtext)
+ */
+:root {
+  --color-primary: 65 169 230;
+  --color-primary-dark: 31 114 166;
+  --color-ink: 15 23 42;
+  --color-surface: 255 255 255;
+  --color-muted: 71 85 105;
+  --color-bg-subtle: 241 245 249;
+}
+
+/* Lokale variable Fonts — 100 % lokal, keine externen Calls (DSGVO) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/heading.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/body.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-body text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary-dark ring-offset-2 ring-offset-surface;
+  }
+}
+
+/* Scroll-Reveal: Fade-Up via IntersectionObserver (src/scripts/scroll-animate.js)
+ * Nur aktiv, wenn JavaScript läuft (.js-Klasse auf <html>) — ohne JS bleiben Inhalte sichtbar. */
+.js [data-animate] {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--animate-delay, 0ms);
+}
+
+.js [data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Redaktioneller Lesemodus (Rechtstexte & längere Inhalte) */
+.prose-content h2 {
+  @apply mt-10 text-2xl sm:text-3xl;
+  scroll-margin-top: 6rem;
+}
+
+.prose-content h3 {
+  @apply mt-8 text-xl;
+  scroll-margin-top: 6rem;
+}
+
+.prose-content p {
+  @apply mt-4 leading-relaxed text-muted;
+}
+
+.prose-content ul {
+  @apply mt-4 list-disc space-y-2 pl-6 text-muted;
+}
+
+.prose-content li {
+  @apply leading-relaxed;
+}
+
+.prose-content strong {
+  @apply font-semibold text-ink;
+}
+
+.prose-content a {
+  @apply font-medium text-primary-dark underline underline-offset-2 hover:text-ink;
+}
+
+/* FAQ-Akkordeon (native details/summary) */
+.faq-item summary {
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item .faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}

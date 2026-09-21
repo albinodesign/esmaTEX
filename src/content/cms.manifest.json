@@ -1,0 +1,2523 @@
+{
+  "features": {
+    "blog": false
+  },
+  "sections": [
+    {
+      "id": "site",
+      "label": "Allgemeine Firmendaten",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Firmenname",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "name",
+          "maxLength": 70
+        },
+        {
+          "id": "legalName",
+          "label": "Rechtlicher Name",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "legalName",
+          "maxLength": 70
+        },
+        {
+          "id": "owner",
+          "label": "Inhaberin",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "owner",
+          "maxLength": 70
+        },
+        {
+          "id": "legalForm",
+          "label": "Rechtsform",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "legalForm",
+          "maxLength": 70
+        },
+        {
+          "id": "slogan",
+          "label": "Slogan",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "slogan",
+          "maxLength": 70
+        },
+        {
+          "id": "description",
+          "label": "Beschreibung",
+          "type": "textarea",
+          "file": "src/content/site.json",
+          "path": "description",
+          "maxLength": 260
+        },
+        {
+          "id": "vatId",
+          "label": "USt-IdNr.",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "vatId",
+          "maxLength": 70
+        },
+        {
+          "id": "url",
+          "label": "Website-URL",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "url",
+          "maxLength": 70
+        },
+        {
+          "id": "email",
+          "label": "E-Mail-Adresse",
+          "type": "email",
+          "file": "src/content/site.json",
+          "path": "email",
+          "maxLength": 120
+        },
+        {
+          "id": "logo",
+          "label": "Logo-Datei",
+          "type": "image",
+          "file": "src/content/site.json",
+          "path": "logo",
+          "maxLength": 200
+        },
+        {
+          "id": "phone.display",
+          "label": "Telefonnummer (Anzeige)",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "phone.display",
+          "maxLength": 70
+        },
+        {
+          "id": "address.street",
+          "label": "Straße & Hausnummer",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "address.street",
+          "maxLength": 70
+        },
+        {
+          "id": "address.zip",
+          "label": "PLZ",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "address.zip",
+          "maxLength": 70
+        },
+        {
+          "id": "address.city",
+          "label": "Ort",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "address.city",
+          "maxLength": 70
+        },
+        {
+          "id": "address.region",
+          "label": "Region",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "address.region",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.0.days",
+          "label": "Montag – Freitag – Tage",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.0.days",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.0.hours",
+          "label": "Montag – Freitag – Uhrzeiten",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.0.hours",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.1.days",
+          "label": "Samstag – Tage",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.1.days",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.1.hours",
+          "label": "Samstag – Uhrzeiten",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.1.hours",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.2.days",
+          "label": "Sonntag – Tage",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.2.days",
+          "maxLength": 70
+        },
+        {
+          "id": "openingHours.2.hours",
+          "label": "Sonntag – Uhrzeiten",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "openingHours.2.hours",
+          "maxLength": 70
+        },
+        {
+          "id": "services.0",
+          "label": "Leistung 1",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.0",
+          "maxLength": 70
+        },
+        {
+          "id": "services.1",
+          "label": "Leistung 2",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.1",
+          "maxLength": 70
+        },
+        {
+          "id": "services.2",
+          "label": "Leistung 3",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.2",
+          "maxLength": 70
+        },
+        {
+          "id": "services.3",
+          "label": "Leistung 4",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.3",
+          "maxLength": 70
+        },
+        {
+          "id": "services.4",
+          "label": "Leistung 5",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.4",
+          "maxLength": 70
+        },
+        {
+          "id": "services.5",
+          "label": "Leistung 6",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.5",
+          "maxLength": 70
+        },
+        {
+          "id": "services.6",
+          "label": "Leistung 7",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "services.6",
+          "maxLength": 70
+        },
+        {
+          "id": "areaServed",
+          "label": "Einzugsgebiet",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "areaServed",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.0.label",
+          "label": "Navigationspunkt 1 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.0.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.1.label",
+          "label": "Navigationspunkt 2 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.1.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.2.label",
+          "label": "Navigationspunkt 3 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.2.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.3.label",
+          "label": "Navigationspunkt 4 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.3.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.4.label",
+          "label": "Navigationspunkt 5 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.4.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.items.5.label",
+          "label": "Navigationspunkt 6 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.items.5.label",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.ctaLabel",
+          "label": "Header-Button – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.ctaLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.menuOpenLabel",
+          "label": "Menü öffnen – Aria-Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.menuOpenLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "navigation.menuCloseLabel",
+          "label": "Menü schließen – Aria-Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "navigation.menuCloseLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.servicesTitle",
+          "label": "Footer – Leistungen Titel",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.servicesTitle",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.contactTitle",
+          "label": "Footer – Kontakt Titel",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.contactTitle",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.legalTitle",
+          "label": "Footer – Rechtliches Titel",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.legalTitle",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.legalLinks.0.label",
+          "label": "Rechtslink 1 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.legalLinks.0.label",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.legalLinks.1.label",
+          "label": "Rechtslink 2 – Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.legalLinks.1.label",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.copyrightNote",
+          "label": "Footer – Copyright-Hinweis",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.copyrightNote",
+          "maxLength": 70
+        },
+        {
+          "id": "footer.madeIn",
+          "label": "Footer – Herkunftszeile",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "footer.madeIn",
+          "maxLength": 70
+        },
+        {
+          "id": "ui.skipLink",
+          "label": "Skip-Link – Text",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "ui.skipLink",
+          "maxLength": 70
+        },
+        {
+          "id": "ui.cookieBanner.title",
+          "label": "Cookie-Banner – Titel",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "ui.cookieBanner.title",
+          "maxLength": 70
+        },
+        {
+          "id": "ui.cookieBanner.text",
+          "label": "Cookie-Banner – Text",
+          "type": "textarea",
+          "file": "src/content/site.json",
+          "path": "ui.cookieBanner.text",
+          "maxLength": 250
+        },
+        {
+          "id": "ui.cookieBanner.essentialLabel",
+          "label": "Cookie-Banner – „Nur essenzielle\"-Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "ui.cookieBanner.essentialLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "ui.cookieBanner.acceptAllLabel",
+          "label": "Cookie-Banner – „Alle akzeptieren\"-Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "ui.cookieBanner.acceptAllLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "ui.cookieBanner.privacyLinkLabel",
+          "label": "Cookie-Banner – Datenschutz-Link-Label",
+          "type": "text",
+          "file": "src/content/site.json",
+          "path": "ui.cookieBanner.privacyLinkLabel",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "label": "Startseite - Hero",
+      "fields": [
+        {
+          "id": "meta.title",
+          "label": "SEO-Titel",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "meta.title",
+          "maxLength": 90
+        },
+        {
+          "id": "meta.description",
+          "label": "SEO-Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "meta.description",
+          "maxLength": 230
+        },
+        {
+          "id": "hero.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.title",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "hero.subtitle",
+          "maxLength": 270
+        },
+        {
+          "id": "hero.usps.0",
+          "label": "USP 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.usps.0",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.usps.1",
+          "label": "USP 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.usps.1",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.usps.2",
+          "label": "USP 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.usps.2",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.primaryCta.label",
+          "label": "Button-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.primaryCta.label",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.secondaryCta.label",
+          "label": "Button-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.secondaryCta.label",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.image.src",
+          "label": "Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "hero.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "hero.image.alt",
+          "label": "Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.image.alt",
+          "maxLength": 80
+        },
+        {
+          "id": "hero.badge.title",
+          "label": "Meisterhafte Stickerei – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.badge.title",
+          "maxLength": 70
+        },
+        {
+          "id": "hero.badge.text",
+          "label": "Meisterhafte Stickerei – Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "hero.badge.text",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "label": "Startseite - Trust Counter",
+      "fields": [
+        {
+          "id": "stats.items.0.value",
+          "label": "Qualitätssicherung – Wert",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.0.value",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.0.suffix",
+          "label": "Qualitätssicherung – Suffix",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.0.suffix",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.0.label",
+          "label": "Qualitätssicherung – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.0.label",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.0.description",
+          "label": "Qualitätssicherung – Beschreibung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.0.description",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.1.value",
+          "label": "Realisierte Projekte – Wert",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.1.value",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.1.suffix",
+          "label": "Realisierte Projekte – Suffix",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.1.suffix",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.1.label",
+          "label": "Realisierte Projekte – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.1.label",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.1.description",
+          "label": "Realisierte Projekte – Beschreibung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.1.description",
+          "maxLength": 80
+        },
+        {
+          "id": "stats.items.2.value",
+          "label": "Vektordatei-Check – Wert",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.2.value",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.2.suffix",
+          "label": "Vektordatei-Check – Suffix",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.2.suffix",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.2.label",
+          "label": "Vektordatei-Check – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.2.label",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.2.description",
+          "label": "Vektordatei-Check – Beschreibung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.2.description",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.3.value",
+          "label": "Persönliche Beratung – Wert",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.3.value",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.3.suffix",
+          "label": "Persönliche Beratung – Suffix",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.3.suffix",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.3.label",
+          "label": "Persönliche Beratung – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.3.label",
+          "maxLength": 70
+        },
+        {
+          "id": "stats.items.3.description",
+          "label": "Persönliche Beratung – Beschreibung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "stats.items.3.description",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Startseite - Leistungen (Übersicht & Detailkarten)",
+      "fields": [
+        {
+          "id": "services.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "services.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.title",
+          "maxLength": 70
+        },
+        {
+          "id": "services.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "services.subtitle",
+          "maxLength": 220
+        },
+        {
+          "id": "services.items.0.title",
+          "label": "Textil-Stickerei – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.title",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.0.description",
+          "label": "Textil-Stickerei – Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.description",
+          "maxLength": 220
+        },
+        {
+          "id": "services.items.0.benefits.0",
+          "label": "Textil-Stickerei – Vorteil 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.benefits.0",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.0.benefits.1",
+          "label": "Textil-Stickerei – Vorteil 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.benefits.1",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.0.benefits.2",
+          "label": "Textil-Stickerei – Vorteil 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.benefits.2",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.0.image.src",
+          "label": "Textil-Stickerei – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "services.items.0.image.alt",
+          "label": "Textil-Stickerei – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.image.alt",
+          "maxLength": 80
+        },
+        {
+          "id": "services.items.0.linkLabel",
+          "label": "Textil-Stickerei – Link-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.0.linkLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.1.title",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.title",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.1.description",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.description",
+          "maxLength": 220
+        },
+        {
+          "id": "services.items.1.benefits.0",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.benefits.0",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.1.benefits.1",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.benefits.1",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.1.benefits.2",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.benefits.2",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.1.image.src",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "services.items.1.image.alt",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.image.alt",
+          "maxLength": 90
+        },
+        {
+          "id": "services.items.1.linkLabel",
+          "label": "Moderner Textildruck (DTF & Siebdruck) – Link-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.1.linkLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.2.title",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.title",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.2.description",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.description",
+          "maxLength": 220
+        },
+        {
+          "id": "services.items.2.benefits.0",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Vorteil 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.benefits.0",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.2.benefits.1",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Vorteil 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.benefits.1",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.2.benefits.2",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Vorteil 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.benefits.2",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.2.image.src",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "services.items.2.image.alt",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.image.alt",
+          "maxLength": 90
+        },
+        {
+          "id": "services.items.2.linkLabel",
+          "label": "Werbetechnik & Fahrzeugbeschriftung – Link-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.2.linkLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.3.title",
+          "label": "Corporate Wear & Vereinsausstattung – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.title",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.3.description",
+          "label": "Corporate Wear & Vereinsausstattung – Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.description",
+          "maxLength": 220
+        },
+        {
+          "id": "services.items.3.benefits.0",
+          "label": "Corporate Wear & Vereinsausstattung – Vorteil 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.benefits.0",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.3.benefits.1",
+          "label": "Corporate Wear & Vereinsausstattung – Vorteil 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.benefits.1",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.3.benefits.2",
+          "label": "Corporate Wear & Vereinsausstattung – Vorteil 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.benefits.2",
+          "maxLength": 70
+        },
+        {
+          "id": "services.items.3.image.src",
+          "label": "Corporate Wear & Vereinsausstattung – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "services.items.3.image.alt",
+          "label": "Corporate Wear & Vereinsausstattung – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.image.alt",
+          "maxLength": 90
+        },
+        {
+          "id": "services.items.3.linkLabel",
+          "label": "Corporate Wear & Vereinsausstattung – Link-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "services.items.3.linkLabel",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "partner",
+      "label": "Startseite - Partner (Sport Wilkening)",
+      "fields": [
+        {
+          "id": "partner.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "partner.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "partner.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "partner.title",
+          "maxLength": 80
+        },
+        {
+          "id": "partner.text",
+          "label": "Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "partner.text",
+          "maxLength": 290
+        },
+        {
+          "id": "partner.linkLabel",
+          "label": "Link-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "partner.linkLabel",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "label": "Startseite - Verfahrensvergleich",
+      "fields": [
+        {
+          "id": "comparison.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.title",
+          "maxLength": 80
+        },
+        {
+          "id": "comparison.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.subtitle",
+          "maxLength": 220
+        },
+        {
+          "id": "comparison.columns.0",
+          "label": "Spalte 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.columns.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.columns.1",
+          "label": "Spalte 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.columns.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.columns.2",
+          "label": "Spalte 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.columns.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.columns.3",
+          "label": "Spalte 4",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.columns.3",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.0.label",
+          "label": "Einsatzbereich – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.0.label",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.0.values.0",
+          "label": "Einsatzbereich – Stickerei",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.0.values.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.0.values.1",
+          "label": "Einsatzbereich – Textildruck (DTF & Siebdruck)",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.0.values.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.0.values.2",
+          "label": "Einsatzbereich – Werbetechnik & Folie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.0.values.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.1.label",
+          "label": "Waschbarkeit & Beständigkeit – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.1.label",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.1.values.0",
+          "label": "Waschbarkeit & Beständigkeit – Stickerei",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.1.values.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.1.values.1",
+          "label": "Waschbarkeit & Beständigkeit – Textildruck (DTF & Siebdruck)",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.1.values.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.1.values.2",
+          "label": "Waschbarkeit & Beständigkeit – Werbetechnik & Folie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.1.values.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.2.label",
+          "label": "Haptik & Optik – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.2.label",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.2.values.0",
+          "label": "Haptik & Optik – Stickerei",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.2.values.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.2.values.1",
+          "label": "Haptik & Optik – Textildruck (DTF & Siebdruck)",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.2.values.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.2.values.2",
+          "label": "Haptik & Optik – Werbetechnik & Folie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.2.values.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.3.label",
+          "label": "Optimale Stückzahl – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.3.label",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.3.values.0",
+          "label": "Optimale Stückzahl – Stickerei",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.3.values.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.3.values.1",
+          "label": "Optimale Stückzahl – Textildruck (DTF & Siebdruck)",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.3.values.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.3.values.2",
+          "label": "Optimale Stückzahl – Werbetechnik & Folie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.3.values.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.4.label",
+          "label": "Preisgefüge – Bezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.4.label",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.4.values.0",
+          "label": "Preisgefüge – Stickerei",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.4.values.0",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.4.values.1",
+          "label": "Preisgefüge – Textildruck (DTF & Siebdruck)",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.4.values.1",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.rows.4.values.2",
+          "label": "Preisgefüge – Werbetechnik & Folie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.rows.4.values.2",
+          "maxLength": 70
+        },
+        {
+          "id": "comparison.note",
+          "label": "Hinweistext",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "comparison.note",
+          "maxLength": 220
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Startseite - Arbeitsweise (3 Schritte)",
+      "fields": [
+        {
+          "id": "process.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "process.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "process.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "process.title",
+          "maxLength": 70
+        },
+        {
+          "id": "process.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "process.subtitle",
+          "maxLength": 220
+        },
+        {
+          "id": "process.steps.0.title",
+          "label": "Anfrage & Textilauswahl – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.0.title",
+          "maxLength": 70
+        },
+        {
+          "id": "process.steps.0.text",
+          "label": "Anfrage & Textilauswahl – Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.0.text",
+          "maxLength": 220
+        },
+        {
+          "id": "process.steps.1.title",
+          "label": "Kostenloser 1:1-Freigabeabzug – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.1.title",
+          "maxLength": 70
+        },
+        {
+          "id": "process.steps.1.text",
+          "label": "Kostenloser 1:1-Freigabeabzug – Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.1.text",
+          "maxLength": 220
+        },
+        {
+          "id": "process.steps.2.title",
+          "label": "Produktion & Übergabe – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.2.title",
+          "maxLength": 70
+        },
+        {
+          "id": "process.steps.2.text",
+          "label": "Produktion & Übergabe – Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "process.steps.2.text",
+          "maxLength": 220
+        }
+      ]
+    },
+    {
+      "id": "showcase",
+      "label": "Startseite - Portfolio / Showcase",
+      "fields": [
+        {
+          "id": "showcase.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.title",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.subtitle",
+          "maxLength": 220
+        },
+        {
+          "id": "showcase.items.0.title",
+          "label": "Arbeitskleidung für Handwerksbetriebe – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.0.title",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.0.category",
+          "label": "Arbeitskleidung für Handwerksbetriebe – Kategorie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.0.category",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.0.image.src",
+          "label": "Arbeitskleidung für Handwerksbetriebe – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.0.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "showcase.items.0.image.alt",
+          "label": "Arbeitskleidung für Handwerksbetriebe – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.0.image.alt",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.1.title",
+          "label": "Sporttrikots & Vereinsbedarf – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.1.title",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.1.category",
+          "label": "Sporttrikots & Vereinsbedarf – Kategorie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.1.category",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.1.image.src",
+          "label": "Sporttrikots & Vereinsbedarf – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.1.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "showcase.items.1.image.alt",
+          "label": "Sporttrikots & Vereinsbedarf – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.1.image.alt",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.2.title",
+          "label": "Fahrzeugbeschriftung für regionale Fu… – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.2.title",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.2.category",
+          "label": "Fahrzeugbeschriftung für regionale Fu… – Kategorie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.2.category",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.2.image.src",
+          "label": "Fahrzeugbeschriftung für regionale Fu… – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.2.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "showcase.items.2.image.alt",
+          "label": "Fahrzeugbeschriftung für regionale Fu… – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.2.image.alt",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.3.title",
+          "label": "Caps, Taschen & individuelle Werbemit… – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.3.title",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.3.category",
+          "label": "Caps, Taschen & individuelle Werbemit… – Kategorie",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.3.category",
+          "maxLength": 70
+        },
+        {
+          "id": "showcase.items.3.image.src",
+          "label": "Caps, Taschen & individuelle Werbemit… – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.3.image.src",
+          "maxLength": 200
+        },
+        {
+          "id": "showcase.items.3.image.alt",
+          "label": "Caps, Taschen & individuelle Werbemit… – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "showcase.items.3.image.alt",
+          "maxLength": 70
+        }
+      ]
+    },
+    {
+      "id": "testimonials",
+      "label": "Startseite - Kundenstimmen",
+      "fields": [
+        {
+          "id": "testimonials.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.title",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.subtitle",
+          "maxLength": 220
+        },
+        {
+          "id": "testimonials.items.0.quote",
+          "label": "M. Thiele – Zitat",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.0.quote",
+          "maxLength": 230
+        },
+        {
+          "id": "testimonials.items.0.author",
+          "label": "M. Thiele – Name",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.0.author",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.0.role",
+          "label": "M. Thiele – Rolle / Position",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.0.role",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.0.company",
+          "label": "M. Thiele – Unternehmen / Ort",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.0.company",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.0.rating",
+          "label": "M. Thiele – Sternebewertung",
+          "type": "number",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.0.rating",
+          "maxLength": 10
+        },
+        {
+          "id": "testimonials.items.1.quote",
+          "label": "S. Brandt – Zitat",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.1.quote",
+          "maxLength": 220
+        },
+        {
+          "id": "testimonials.items.1.author",
+          "label": "S. Brandt – Name",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.1.author",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.1.role",
+          "label": "S. Brandt – Rolle / Position",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.1.role",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.1.company",
+          "label": "S. Brandt – Unternehmen / Ort",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.1.company",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.1.rating",
+          "label": "S. Brandt – Sternebewertung",
+          "type": "number",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.1.rating",
+          "maxLength": 10
+        },
+        {
+          "id": "testimonials.items.2.quote",
+          "label": "A. Yilmaz – Zitat",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.2.quote",
+          "maxLength": 220
+        },
+        {
+          "id": "testimonials.items.2.author",
+          "label": "A. Yilmaz – Name",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.2.author",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.2.role",
+          "label": "A. Yilmaz – Rolle / Position",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.2.role",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.2.company",
+          "label": "A. Yilmaz – Unternehmen / Ort",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.2.company",
+          "maxLength": 70
+        },
+        {
+          "id": "testimonials.items.2.rating",
+          "label": "A. Yilmaz – Sternebewertung",
+          "type": "number",
+          "file": "src/content/pages/index.json",
+          "path": "testimonials.items.2.rating",
+          "maxLength": 10
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "Startseite - FAQ",
+      "fields": [
+        {
+          "id": "faq.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.title",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.subtitle",
+          "label": "Untertitel",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.subtitle",
+          "maxLength": 140
+        },
+        {
+          "id": "faq.items.0.question",
+          "label": "Welche Dateiformate benötigt ihr für… – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.0.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.0.answer",
+          "label": "Welche Dateiformate benötigt ihr für… – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.0.answer",
+          "maxLength": 300
+        },
+        {
+          "id": "faq.items.1.question",
+          "label": "Gibt es eine Mindestbestellmenge? – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.1.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.1.answer",
+          "label": "Gibt es eine Mindestbestellmenge? – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.1.answer",
+          "maxLength": 220
+        },
+        {
+          "id": "faq.items.2.question",
+          "label": "Wie waschbar sind Druck und Stickerei? – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.2.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.2.answer",
+          "label": "Wie waschbar sind Druck und Stickerei? – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.2.answer",
+          "maxLength": 280
+        },
+        {
+          "id": "faq.items.3.question",
+          "label": "Kann ich Musterkleidung anprobieren? – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.3.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.3.answer",
+          "label": "Kann ich Musterkleidung anprobieren? – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.3.answer",
+          "maxLength": 260
+        },
+        {
+          "id": "faq.items.4.question",
+          "label": "Wie lange dauert die Produktion? – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.4.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.4.answer",
+          "label": "Wie lange dauert die Produktion? – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.4.answer",
+          "maxLength": 220
+        },
+        {
+          "id": "faq.items.5.question",
+          "label": "Könnt ihr auch bei der Logo-Gestaltun… – Frage",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.5.question",
+          "maxLength": 70
+        },
+        {
+          "id": "faq.items.5.answer",
+          "label": "Könnt ihr auch bei der Logo-Gestaltun… – Antwort",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "faq.items.5.answer",
+          "maxLength": 230
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Startseite - Finaler Call to Action",
+      "fields": [
+        {
+          "id": "cta.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "cta.title",
+          "maxLength": 70
+        },
+        {
+          "id": "cta.text",
+          "label": "Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "cta.text",
+          "maxLength": 220
+        },
+        {
+          "id": "cta.primaryCta.label",
+          "label": "Button-Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "cta.primaryCta.label",
+          "maxLength": 70
+        },
+        {
+          "id": "cta.note",
+          "label": "Hinweistext",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "cta.note",
+          "maxLength": 80
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Startseite - Kontakt (Infos & Formular)",
+      "fields": [
+        {
+          "id": "contact.eyebrow",
+          "label": "Dachzeile",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.eyebrow",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.title",
+          "label": "Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.title",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.subtitle",
+          "label": "Untertitel",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "contact.subtitle",
+          "maxLength": 220
+        }
+      ]
+    },
+    {
+      "id": "contact-info",
+      "label": "Startseite - Kontaktinfos & Anfahrt",
+      "fields": [
+        {
+          "id": "contact.info.title",
+          "label": "Dein direkter Draht zu uns – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.title",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.text",
+          "label": "Dein direkter Draht zu uns – Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.text",
+          "maxLength": 140
+        },
+        {
+          "id": "contact.info.personName",
+          "label": "Dein direkter Draht zu uns – Ansprechpartner:in",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.personName",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.personRole",
+          "label": "Dein direkter Draht zu uns – Position",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.personRole",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.addressLabel",
+          "label": "Dein direkter Draht zu uns – Adresse – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.addressLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.phoneLabel",
+          "label": "Dein direkter Draht zu uns – Telefon – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.phoneLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.emailLabel",
+          "label": "Dein direkter Draht zu uns – E-Mail – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.emailLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.hoursLabel",
+          "label": "Dein direkter Draht zu uns – Öffnungszeiten – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.hoursLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.info.hoursNote",
+          "label": "Dein direkter Draht zu uns – Öffnungszeiten – Hinweis",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.info.hoursNote",
+          "maxLength": 90
+        },
+        {
+          "id": "contact.anfahrt.title",
+          "label": "Anfahrt – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "contact.anfahrt.title",
+          "maxLength": 70
+        },
+        {
+          "id": "contact.anfahrt.text",
+          "label": "Anfahrt – Text",
+          "type": "textarea",
+          "file": "src/content/pages/index.json",
+          "path": "contact.anfahrt.text",
+          "maxLength": 230
+        }
+      ]
+    },
+    {
+      "id": "contact-form",
+      "label": "Startseite - Kontaktformular",
+      "fields": [
+        {
+          "id": "form.title",
+          "label": "Formular – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.title",
+          "maxLength": 70
+        },
+        {
+          "id": "form.subtitle",
+          "label": "Formular – Untertitel",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.subtitle",
+          "maxLength": 130
+        },
+        {
+          "id": "form.firstNameLabel",
+          "label": "Vorname – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.firstNameLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.firstNamePlaceholder",
+          "label": "Vorname – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.firstNamePlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.lastNameLabel",
+          "label": "Nachname – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.lastNameLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.lastNamePlaceholder",
+          "label": "Nachname – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.lastNamePlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.emailLabel",
+          "label": "E-Mail – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.emailLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.emailPlaceholder",
+          "label": "E-Mail – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.emailPlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.phoneLabel",
+          "label": "Telefon – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.phoneLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.phonePlaceholder",
+          "label": "Telefon – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.phonePlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.serviceLabel",
+          "label": "Leistungsbereich – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.serviceLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.servicePlaceholder",
+          "label": "Leistungsbereich – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.servicePlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.serviceOptions.0",
+          "label": "Option 1",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.serviceOptions.0",
+          "maxLength": 70
+        },
+        {
+          "id": "form.serviceOptions.1",
+          "label": "Option 2",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.serviceOptions.1",
+          "maxLength": 70
+        },
+        {
+          "id": "form.serviceOptions.2",
+          "label": "Option 3",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.serviceOptions.2",
+          "maxLength": 70
+        },
+        {
+          "id": "form.serviceOptions.3",
+          "label": "Option 4",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.serviceOptions.3",
+          "maxLength": 70
+        },
+        {
+          "id": "form.quantityLabel",
+          "label": "Stückzahl – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.quantityLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.quantityPlaceholder",
+          "label": "Stückzahl – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.quantityPlaceholder",
+          "maxLength": 70
+        },
+        {
+          "id": "form.messageLabel",
+          "label": "Nachricht – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.messageLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.messagePlaceholder",
+          "label": "Nachricht – Platzhalter",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.messagePlaceholder",
+          "maxLength": 90
+        },
+        {
+          "id": "form.privacyNote",
+          "label": "Datenschutz-Hinweis",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.privacyNote",
+          "maxLength": 140
+        },
+        {
+          "id": "form.submitLabel",
+          "label": "Absende-Button – Label",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.submitLabel",
+          "maxLength": 70
+        },
+        {
+          "id": "form.successTitle",
+          "label": "Erfolgsmeldung – Titel",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.successTitle",
+          "maxLength": 70
+        },
+        {
+          "id": "form.successMessage",
+          "label": "Erfolgsmeldung – Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.successMessage",
+          "maxLength": 120
+        },
+        {
+          "id": "form.errorMessage",
+          "label": "Fehlermeldung",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.errorMessage",
+          "maxLength": 140
+        },
+        {
+          "id": "emailSubject",
+          "label": "E-Mail-Betreff",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "form.emailSubject",
+          "maxLength": 120
+        }
+      ]
+    },
+    {
+      "id": "impressum-header",
+      "label": "Rechtliches - Impressum",
+      "fields": [
+        {
+          "id": "meta.title",
+          "label": "SEO-Titel",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "meta.title",
+          "maxLength": 70
+        },
+        {
+          "id": "meta.description",
+          "label": "SEO-Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "meta.description",
+          "maxLength": 220
+        },
+        {
+          "id": "header.title",
+          "label": "Seitentitel",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "header.title",
+          "maxLength": 70
+        },
+        {
+          "id": "header.subtitle",
+          "label": "Seitenuntertitel",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "header.subtitle",
+          "maxLength": 90
+        }
+      ]
+    },
+    {
+      "id": "impressum-company",
+      "label": "Rechtliches - Impressum Firmendaten & Texte",
+      "fields": [
+        {
+          "id": "companySection.title",
+          "label": "Firmenblock – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "companySection.title",
+          "maxLength": 70
+        },
+        {
+          "id": "companySection.vatLabel",
+          "label": "Angaben gemäß § 5 DDG – USt-IdNr. – Feldbezeichnung",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "companySection.vatLabel",
+          "maxLength": 100
+        },
+        {
+          "id": "companySection.responsibleTitle",
+          "label": "Angaben gemäß § 5 DDG – Verantwortlich i. S. d. MStV – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "companySection.responsibleTitle",
+          "maxLength": 80
+        },
+        {
+          "id": "sections.0.title",
+          "label": "Haftung für Inhalte – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.0.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.0.paragraphs.0",
+          "label": "Haftung für Inhalte – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.0.paragraphs.0",
+          "maxLength": 370
+        },
+        {
+          "id": "sections.0.paragraphs.1",
+          "label": "Haftung für Inhalte – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.0.paragraphs.1",
+          "maxLength": 410
+        },
+        {
+          "id": "sections.1.title",
+          "label": "Haftung für Links – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.1.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.1.paragraphs.0",
+          "label": "Haftung für Links – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.1.paragraphs.0",
+          "maxLength": 390
+        },
+        {
+          "id": "sections.1.paragraphs.1",
+          "label": "Haftung für Links – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.1.paragraphs.1",
+          "maxLength": 340
+        },
+        {
+          "id": "sections.2.title",
+          "label": "Urheberrecht – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.2.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.2.paragraphs.0",
+          "label": "Urheberrecht – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.2.paragraphs.0",
+          "maxLength": 410
+        },
+        {
+          "id": "sections.2.paragraphs.1",
+          "label": "Urheberrecht – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/impressum.json",
+          "path": "sections.2.paragraphs.1",
+          "maxLength": 290
+        },
+        {
+          "id": "phoneLabel",
+          "label": "Telefon-Label",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "companySection.phoneLabel",
+          "maxLength": 40
+        },
+        {
+          "id": "emailLabel",
+          "label": "E-Mail-Label",
+          "type": "text",
+          "file": "src/content/pages/impressum.json",
+          "path": "companySection.emailLabel",
+          "maxLength": 40
+        }
+      ]
+    },
+    {
+      "id": "datenschutz-header",
+      "label": "Rechtliches - Datenschutz",
+      "fields": [
+        {
+          "id": "meta.title",
+          "label": "SEO-Titel",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "meta.title",
+          "maxLength": 70
+        },
+        {
+          "id": "meta.description",
+          "label": "SEO-Beschreibung",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "meta.description",
+          "maxLength": 220
+        },
+        {
+          "id": "header.title",
+          "label": "Seitentitel",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "header.title",
+          "maxLength": 70
+        },
+        {
+          "id": "header.subtitle",
+          "label": "Seitenuntertitel",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "header.subtitle",
+          "maxLength": 110
+        }
+      ]
+    },
+    {
+      "id": "datenschutz-controller",
+      "label": "Rechtliches - Datenschutz Verantwortliche & Texte",
+      "fields": [
+        {
+          "id": "controllerSection.title",
+          "label": "Abschnitt – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "controllerSection.title",
+          "maxLength": 70
+        },
+        {
+          "id": "controllerSection.text",
+          "label": "Abschnitt – Einleitung",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "controllerSection.text",
+          "maxLength": 90
+        },
+        {
+          "id": "sections.0.title",
+          "label": "2. Hosting dieser Website – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.0.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.0.paragraphs.0",
+          "label": "2. Hosting dieser Website – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.0.paragraphs.0",
+          "maxLength": 520
+        },
+        {
+          "id": "sections.0.paragraphs.1",
+          "label": "2. Hosting dieser Website – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.0.paragraphs.1",
+          "maxLength": 370
+        },
+        {
+          "id": "sections.1.title",
+          "label": "3. Kontaktformular und E-Mail-Kontakt – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.1.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.1.paragraphs.0",
+          "label": "3. Kontaktformular und E-Mail-Kontakt – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.1.paragraphs.0",
+          "maxLength": 360
+        },
+        {
+          "id": "sections.1.paragraphs.1",
+          "label": "3. Kontaktformular und E-Mail-Kontakt – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.1.paragraphs.1",
+          "maxLength": 480
+        },
+        {
+          "id": "sections.2.title",
+          "label": "4. Cookies und lokale Speicherung – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.2.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.2.paragraphs.0",
+          "label": "4. Cookies und lokale Speicherung – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.2.paragraphs.0",
+          "maxLength": 390
+        },
+        {
+          "id": "sections.2.paragraphs.1",
+          "label": "4. Cookies und lokale Speicherung – Absatz 2",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.2.paragraphs.1",
+          "maxLength": 220
+        },
+        {
+          "id": "sections.3.title",
+          "label": "5. Analyse- und Tracking-Tools – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.3.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.3.paragraphs.0",
+          "label": "5. Analyse- und Tracking-Tools – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.3.paragraphs.0",
+          "maxLength": 320
+        },
+        {
+          "id": "sections.4.title",
+          "label": "6. Deine Rechte – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.4.paragraphs.0",
+          "label": "6. Deine Rechte – Absatz 1",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.paragraphs.0",
+          "maxLength": 140
+        },
+        {
+          "id": "sections.4.list.0",
+          "label": "6. Deine Rechte – Listenpunkt 1",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.0",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.4.list.1",
+          "label": "6. Deine Rechte – Listenpunkt 2",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.1",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.4.list.2",
+          "label": "6. Deine Rechte – Listenpunkt 3",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.2",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.4.list.3",
+          "label": "6. Deine Rechte – Listenpunkt 4",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.3",
+          "maxLength": 80
+        },
+        {
+          "id": "sections.4.list.4",
+          "label": "6. Deine Rechte – Listenpunkt 5",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.4",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.4.list.5",
+          "label": "6. Deine Rechte – Listenpunkt 6",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.5",
+          "maxLength": 90
+        },
+        {
+          "id": "sections.4.list.6",
+          "label": "6. Deine Rechte – Listenpunkt 7",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.4.list.6",
+          "maxLength": 100
+        },
+        {
+          "id": "sections.5.title",
+          "label": "7. Beschwerderecht bei der Aufsichtsb… – Überschrift",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.5.title",
+          "maxLength": 70
+        },
+        {
+          "id": "sections.5.paragraphs.0",
+          "label": "7. Beschwerderecht bei der Aufsichtsb… – Absatz 1",
+          "type": "textarea",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "sections.5.paragraphs.0",
+          "maxLength": 310
+        },
+        {
+          "id": "phoneLabel",
+          "label": "Telefon-Label",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "controllerSection.phoneLabel",
+          "maxLength": 40
+        },
+        {
+          "id": "emailLabel",
+          "label": "E-Mail-Label",
+          "type": "text",
+          "file": "src/content/pages/datenschutz.json",
+          "path": "controllerSection.emailLabel",
+          "maxLength": 40
+        }
+      ]
+    }
+  ]
+}

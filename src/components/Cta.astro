@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ArrowRightIcon from './icons/ArrowRightIcon.astro';
+import PhoneIcon from './icons/PhoneIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  cta: IndexData['cta'];
+  site: CollectionEntry<'site'>['data'];
+}
+
+const { cta, site } = Astro.props;
+---
+
+<section data-cms-section="cta" class="bg-primary py-16 lg:py-20">
+  <div class="mx-auto max-w-4xl px-4 text-center sm:px-6" data-animate>
+    <h2 data-cms-field="cta.title" class="text-3xl font-extrabold text-ink sm:text-4xl">
+      {cta.title}
+    </h2>
+    <p data-cms-field="cta.text" class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-ink/80">
+      {cta.text}
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href={cta.primaryCta.href}
+        class="inline-flex items-center gap-2 rounded-xl bg-ink px-7 py-3.5 font-semibold text-white shadow-xl transition hover:bg-slate-800"
+      >
+        <span data-cms-field="cta.primaryCta.label">{cta.primaryCta.label}</span>
+        <ArrowRightIcon class="h-5 w-5 text-primary" />
+      </a>
+      <a
+        href={site.phone.href}
+        class="inline-flex items-center gap-2 rounded-xl border-2 border-ink/25 px-7 py-3.5 font-semibold text-ink transition hover:border-ink"
+      >
+        <PhoneIcon class="h-5 w-5" />
+        <span data-cms-field="phone.display">{site.phone.display}</span>
+      </a>
+    </div>
+    <p data-cms-field="cta.note" class="mt-5 text-sm font-medium text-ink">{cta.note}</p>
+  </div>
+</section>

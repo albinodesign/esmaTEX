@@ -1,0 +1,144 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PhoneIcon from './icons/PhoneIcon.astro';
+import MenuIcon from './icons/MenuIcon.astro';
+import XIcon from './icons/XIcon.astro';
+
+interface Props {
+  site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+const nav = site.navigation;
+---
+
+<header
+  data-cms-section="site"
+  class="sticky top-0 z-50 border-b border-slate-200/80 bg-surface/90 backdrop-blur"
+>
+  <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 md:h-20 lg:px-8">
+    <a href="/" class="flex items-center gap-3" aria-label={site.name}>
+      <img
+        src={site.logo}
+        alt={site.name}
+        width="800"
+        height="302"
+        class="h-10 w-auto rounded-xl md:h-12"
+      />
+      <span
+        class="hidden border-l border-slate-300 pl-3 text-xs font-medium text-muted lg:block"
+        data-cms-field="slogan">{site.slogan}</span
+      >
+    </a>
+
+    <nav class="hidden items-center gap-7 xl:flex" aria-label="Hauptnavigation">
+      {
+        nav.items.map((item, i) => (
+          <a
+            href={item.href}
+            data-cms-field={`navigation.items.${i}.label`}
+            class="text-sm font-medium text-ink transition hover:text-primary-dark"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={site.phone.href}
+        class="hidden items-center gap-2 text-sm font-semibold text-ink transition hover:text-primary-dark md:inline-flex"
+      >
+        <PhoneIcon class="h-4 w-4 text-primary-dark" />
+        <span data-cms-field="phone.display">{site.phone.display}</span>
+      </a>
+      <a
+        href={nav.ctaHref}
+        data-cms-field="navigation.ctaLabel"
+        class="hidden rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-ink shadow-md shadow-primary/25 transition hover:bg-primary-dark hover:text-white sm:inline-flex"
+      >
+        {nav.ctaLabel}
+      </a>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-ink transition hover:bg-subtle xl:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label={nav.menuOpenLabel}
+        data-open-label={nav.menuOpenLabel}
+        data-close-label={nav.menuCloseLabel}
+      >
+        <span id="menu-icon-open"><MenuIcon class="h-6 w-6" /></span>
+        <span id="menu-icon-close" class="hidden"><XIcon class="h-6 w-6" /></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" hidden class="border-t border-slate-200 bg-surface xl:hidden">
+    <nav class="space-y-1 px-4 py-4" aria-label="Mobile Navigation">
+      {
+        nav.items.map((item) => (
+          <a
+            href={item.href}
+            class="mobile-link block rounded-lg px-3 py-2.5 font-medium text-ink transition hover:bg-subtle"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+      <div class="flex flex-col gap-3 pt-3">
+        <a
+          href={site.phone.href}
+          class="mobile-link inline-flex items-center justify-center gap-2 rounded-xl border-2 border-ink/10 px-4 py-3 font-semibold text-ink"
+        >
+          <PhoneIcon class="h-5 w-5 text-primary-dark" />
+          {site.phone.display}
+        </a>
+        <a
+          href={nav.ctaHref}
+          class="mobile-link inline-flex items-center justify-center rounded-xl bg-primary px-4 py-3 font-semibold text-ink"
+        >
+          {nav.ctaLabel}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  function closeMenu() {
+    if (!toggle || !menu) return;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', toggle.dataset.openLabel ?? '');
+    menu.hidden = true;
+    document.getElementById('menu-icon-open')?.classList.remove('hidden');
+    document.getElementById('menu-icon-close')?.classList.add('hidden');
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  toggle?.addEventListener('click', () => {
+    if (!toggle || !menu) return;
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeMenu();
+    } else {
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', toggle.dataset.closeLabel ?? '');
+      menu.hidden = false;
+      document.getElementById('menu-icon-open')?.classList.add('hidden');
+      document.getElementById('menu-icon-close')?.classList.remove('hidden');
+    }
+  });
+
+  menu?.querySelectorAll('.mobile-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

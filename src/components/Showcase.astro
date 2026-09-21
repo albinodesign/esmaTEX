@@ -1,0 +1,56 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  showcase: IndexData['showcase'];
+}
+
+const { showcase } = Astro.props;
+---
+
+<section id="referenzen" data-cms-section="showcase" class="bg-ink py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow={showcase.eyebrow}
+      title={showcase.title}
+      subtitle={showcase.subtitle}
+      fieldPrefix="showcase"
+      dark
+    />
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        showcase.items.map((item, i) => (
+          <figure
+            class="group relative overflow-hidden rounded-2xl ring-1 ring-white/10"
+            data-animate
+            data-animate-delay={String((i % 4) * 90)}
+          >
+            <img
+              src={item.image.src}
+              alt={item.image.alt}
+              data-cms-field={`showcase.items.${i}.image.src`}
+              width="1200"
+              height="900"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 via-ink/60 to-transparent p-5 pt-14">
+              <span
+                data-cms-field={`showcase.items.${i}.category`}
+                class="inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-ink"
+              >
+                {item.category}
+              </span>
+              <p data-cms-field={`showcase.items.${i}.title`} class="mt-2 text-sm font-semibold text-white">
+                {item.title}
+              </p>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>

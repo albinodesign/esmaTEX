@@ -1,0 +1,129 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PhoneIcon from './icons/PhoneIcon.astro';
+import MailIcon from './icons/MailIcon.astro';
+import MapPinIcon from './icons/MapPinIcon.astro';
+
+interface Props {
+  site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer data-cms-section="site" class="bg-ink text-slate-300">
+  <div
+    class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"
+  >
+    <div>
+      <img
+        src={site.logo}
+        alt={site.name}
+        width="800"
+        height="302"
+        class="h-14 w-auto rounded-xl"
+        loading="lazy"
+      />
+      <p class="mt-3 text-sm font-semibold text-primary" data-cms-field="slogan">{site.slogan}</p>
+      <p class="mt-4 text-sm leading-relaxed" data-cms-field="description">{site.description}</p>
+      <p class="mt-4 text-xs text-slate-400" data-cms-field="footer.madeIn">{site.footer.madeIn}</p>
+    </div>
+
+    <nav aria-label="Leistungen im Footer">
+      <p class="font-heading font-bold text-white" data-cms-field="footer.servicesTitle">
+        {site.footer.servicesTitle}
+      </p>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {
+          site.services.map((service, i) => (
+            <li data-cms-field={`services.${i}`}>{service}</li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div>
+      <p class="font-heading font-bold text-white" data-cms-field="footer.contactTitle">
+        {site.footer.contactTitle}
+      </p>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li class="flex items-start gap-2.5">
+          <MapPinIcon class="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+          <span>
+            <span data-cms-field="address.street">{site.address.street}</span><br />
+            <span data-cms-field="address.zip">{site.address.zip}</span>
+            <span data-cms-field="address.city">{site.address.city}</span>
+          </span>
+        </li>
+        <li>
+          <a
+            href={site.phone.href}
+            class="flex items-center gap-2.5 transition hover:text-white"
+          >
+            <PhoneIcon class="h-4 w-4 shrink-0 text-primary" />
+            <span data-cms-field="phone.display">{site.phone.display}</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href={`mailto:${site.email}`}
+            class="flex items-center gap-2.5 transition hover:text-white"
+          >
+            <MailIcon class="h-4 w-4 shrink-0 text-primary" />
+            <span data-cms-field="email">{site.email}</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="mt-4 space-y-1 text-xs text-slate-400">
+        {
+          site.openingHours.map((entry, i) => (
+            <li>
+              <span data-cms-field={`openingHours.${i}.days`}>{entry.days}</span>:{' '}
+              <span data-cms-field={`openingHours.${i}.hours`}>{entry.hours}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <nav aria-label="Rechtliches im Footer">
+      <p class="font-heading font-bold text-white" data-cms-field="footer.legalTitle">
+        {site.footer.legalTitle}
+      </p>
+      <ul class="mt-4 space-y-2.5 text-sm">
+        {
+          site.footer.legalLinks.map((link, i) => (
+            <li>
+              <a
+                href={link.href}
+                data-cms-field={`footer.legalLinks.${i}.label`}
+                class="transition hover:text-white"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6 text-xs text-slate-400">
+        <span data-cms-field="owner">{site.owner}</span> · <span data-cms-field="legalForm">{site.legalForm}</span><br />
+        USt-IdNr. <span data-cms-field="vatId">{site.vatId}</span>
+      </p>
+    </nav>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div
+      class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-5 text-xs text-slate-400 sm:px-6 lg:px-8"
+    >
+      <p>
+        © {year}
+        <span data-cms-field="name">{site.name}</span> – <span data-cms-field="footer.copyrightNote"
+          >{site.footer.copyrightNote}</span
+        >
+      </p>
+      <p data-cms-field="slogan">{site.slogan}</p>
+    </div>
+  </div>
+</footer>

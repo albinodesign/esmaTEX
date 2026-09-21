@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import ChevronDownIcon from './icons/ChevronDownIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  faq: IndexData['faq'];
+}
+
+const { faq } = Astro.props;
+---
+
+<section data-cms-section="faq" class="bg-subtle py-20 lg:py-24">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow={faq.eyebrow}
+      title={faq.title}
+      subtitle={faq.subtitle}
+      fieldPrefix="faq"
+    />
+    <div class="mt-12 space-y-4">
+      {
+        faq.items.map((item, i) => (
+          <details
+            class="faq-item rounded-2xl bg-surface ring-1 ring-slate-200 open:ring-primary/50"
+            data-animate
+          >
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-semibold text-ink">
+              <span data-cms-field={`faq.items.${i}.question`}>{item.question}</span>
+              <ChevronDownIcon class="faq-chevron h-5 w-5 shrink-0 text-primary-dark" />
+            </summary>
+            <p data-cms-field={`faq.items.${i}.answer`} class="px-6 pb-6 leading-relaxed text-muted">
+              {item.answer}
+            </p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

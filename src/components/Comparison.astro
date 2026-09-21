@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import SparklesIcon from './icons/SparklesIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  comparison: IndexData['comparison'];
+}
+
+const { comparison } = Astro.props;
+---
+
+<section id="verfahren" data-cms-section="comparison" class="bg-subtle py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow={comparison.eyebrow}
+      title={comparison.title}
+      subtitle={comparison.subtitle}
+      fieldPrefix="comparison"
+    />
+    <div
+      class="mt-12 overflow-x-auto rounded-2xl bg-surface shadow-sm ring-1 ring-slate-200"
+      data-animate
+    >
+      <table class="w-full min-w-[760px] border-collapse text-left text-sm">
+        <caption class="sr-only">{comparison.title}</caption>
+        <thead>
+          <tr class="bg-ink text-white">
+            {
+              comparison.columns.map((column, i) => (
+                <th
+                  scope="col"
+                  data-cms-field={`comparison.columns.${i}`}
+                  class="px-5 py-4 font-heading text-sm font-bold"
+                >
+                  {column}
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            comparison.rows.map((row, r) => (
+              <tr class="border-t border-slate-200 even:bg-subtle/60">
+                <th
+                  scope="row"
+                  data-cms-field={`comparison.rows.${r}.label`}
+                  class="px-5 py-4 font-semibold text-ink"
+                >
+                  {row.label}
+                </th>
+                {row.values.map((value, c) => (
+                  <td data-cms-field={`comparison.rows.${r}.values.${c}`} class="px-5 py-4 text-muted">
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p
+      class="mt-6 flex items-start gap-3 rounded-2xl bg-primary/10 p-5 text-sm font-medium text-ink"
+      data-animate
+    >
+      <SparklesIcon class="h-5 w-5 shrink-0 text-primary-dark" />
+      <span data-cms-field="comparison.note">{comparison.note}</span>
+    </p>
+  </div>
+</section>

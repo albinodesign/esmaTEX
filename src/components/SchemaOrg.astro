@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${site.url}/#business`,
+  name: site.name,
+  legalName: site.legalName,
+  slogan: site.slogan,
+  description: site.description,
+  url: site.url,
+  telephone: site.phone.href.replace('tel:', ''),
+  email: site.email,
+  founder: {
+    '@type': 'Person',
+    name: site.owner
+  },
+  vatID: site.vatId,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.address.street,
+    postalCode: site.address.zip,
+    addressLocality: site.address.city,
+    addressRegion: site.address.region,
+    addressCountry: site.address.country
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: site.address.geo.lat,
+    longitude: site.address.geo.lng
+  },
+  openingHours: site.openingHoursSchema,
+  areaServed: site.areaServed,
+  image: `${site.url}/images/hero.webp`,
+  ...(site.social.length > 0 ? { sameAs: site.social.map((entry) => entry.url) } : {})
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(localBusiness)} />

@@ -1,0 +1,91 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import CheckIcon from './icons/CheckIcon.astro';
+import ArrowRightIcon from './icons/ArrowRightIcon.astro';
+import SparklesIcon from './icons/SparklesIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  hero: IndexData['hero'];
+}
+
+const { hero } = Astro.props;
+---
+
+<section
+  data-cms-section="hero"
+  class="relative overflow-hidden bg-gradient-to-b from-subtle to-surface"
+>
+  <div
+    class="mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-5 lg:items-center lg:gap-10 lg:px-8 lg:pb-24 lg:pt-20"
+  >
+    <div class="lg:col-span-3" data-animate>
+      <p
+        data-cms-field="hero.eyebrow"
+        class="text-sm font-semibold uppercase tracking-widest text-primary-dark"
+      >
+        {hero.eyebrow}
+      </p>
+      <h1 data-cms-field="hero.title" class="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+        {hero.title}
+      </h1>
+      <p data-cms-field="hero.subtitle" class="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+        {hero.subtitle}
+      </p>
+      <ul class="mt-7 flex flex-wrap gap-x-6 gap-y-3">
+        {
+          hero.usps.map((usp, i) => (
+            <li class="flex items-center gap-2 text-sm font-medium text-ink">
+              <CheckIcon class="h-5 w-5 shrink-0 text-primary-dark" />
+              <span data-cms-field={`hero.usps.${i}`}>{usp}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a
+          href={hero.primaryCta.href}
+          class="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-semibold text-ink shadow-lg shadow-primary/30 transition hover:bg-primary-dark hover:text-white"
+        >
+          <span data-cms-field="hero.primaryCta.label">{hero.primaryCta.label}</span>
+          <ArrowRightIcon class="h-5 w-5" />
+        </a>
+        <a
+          href={hero.secondaryCta.href}
+          data-cms-field="hero.secondaryCta.label"
+          class="inline-flex items-center gap-2 rounded-xl border-2 border-ink/10 bg-surface px-6 py-3.5 font-semibold text-ink transition hover:border-primary"
+        >
+          {hero.secondaryCta.label}
+        </a>
+      </div>
+    </div>
+    <div class="relative lg:col-span-2" data-animate data-animate-delay="150">
+      <div class="overflow-hidden rounded-3xl shadow-2xl shadow-ink/20 ring-1 ring-ink/10">
+        <img
+          src={hero.image.src}
+          alt={hero.image.alt}
+          data-cms-field="hero.image.src"
+          width="1448"
+          height="1086"
+          class="h-auto w-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div
+        class="absolute -bottom-6 left-4 rounded-2xl bg-ink px-5 py-4 text-white shadow-xl sm:-left-6"
+      >
+        <div class="flex items-center gap-3">
+          <SparklesIcon class="h-7 w-7 shrink-0 text-primary" />
+          <div>
+            <p data-cms-field="hero.badge.title" class="font-heading text-sm font-bold">
+              {hero.badge.title}
+            </p>
+            <p data-cms-field="hero.badge.text" class="text-xs text-slate-300">{hero.badge.text}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  stats: IndexData['stats'];
+}
+
+const { stats } = Astro.props;
+---
+
+<section data-cms-section="stats" class="bg-ink py-14 lg:py-16">
+  <div
+    class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 px-4 sm:px-6 lg:grid-cols-4 lg:px-8"
+  >
+    {
+      stats.items.map((item, i) => (
+        <div class="text-center lg:text-left" data-animate data-animate-delay={String(i * 100)}>
+          <p class="font-heading text-4xl font-extrabold text-primary sm:text-5xl">
+            <span data-cms-field={`stats.items.${i}.value`}>{item.value}</span>
+            <span data-cms-field={`stats.items.${i}.suffix`}>{item.suffix}</span>
+          </p>
+          <p data-cms-field={`stats.items.${i}.label`} class="mt-2 font-semibold text-white">
+            {item.label}
+          </p>
+          <p data-cms-field={`stats.items.${i}.description`} class="mt-1 text-sm text-slate-400">
+            {item.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import { getEntry } from 'astro:content';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import headingFontUrl from '../assets/fonts/heading.woff2?url';
+import bodyFontUrl from '../assets/fonts/body.woff2?url';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const siteEntry = await getEntry('site', 'site');
+if (!siteEntry) {
+  throw new Error('Zentrale Unternehmensdaten (src/content/site.json) fehlen.');
+}
+const site = siteEntry.data;
+const canonicalUrl = new URL(Astro.url.pathname, site.url);
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${site.url}/images/hero.webp`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={headingFontUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href={bodyFontUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+    <meta name="theme-color" content="#41A9E6" />
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
+    <SchemaOrg site={site} />
+    <script is:inline>
+      if (window.self !== window.top) {
+        window.addEventListener('message', (event) => {
+          if (event.data?.type === 'CMS_FIELD_UPDATE') {
+            document
+              .querySelectorAll(`[data-cms-field="${event.data.field}"]`)
+              .forEach((el) => {
+                if (el.tagName === 'IMG') {
+                  el.src = event.data.value;
+                } else {
+                  el.innerText = event.data.value;
+                }
+              });
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <a
+      href="#main"
+      data-cms-field="ui.skipLink"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
+      >{site.ui.skipLink}</a
+    >
+    <Header site={site} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer site={site} />
+    <CookieBanner site={site} />
+    <script>
+      import '../scripts/scroll-animate.js';
+    </script>
+  </body>
+</html>

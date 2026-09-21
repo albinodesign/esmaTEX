@@ -1,0 +1,41 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import Services from '../components/Services.astro';
+import Partner from '../components/Partner.astro';
+import Comparison from '../components/Comparison.astro';
+import Process from '../components/Process.astro';
+import Showcase from '../components/Showcase.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+import Contact from '../components/Contact.astro';
+
+const pageEntry = await getEntry('pages', 'index');
+if (!pageEntry || pageEntry.data.page !== 'index') {
+  throw new Error('Seiteninhalte für die Startseite fehlen (src/content/pages/index.json).');
+}
+const page = pageEntry.data;
+
+const siteEntry = await getEntry('site', 'site');
+if (!siteEntry) {
+  throw new Error('Zentrale Unternehmensdaten fehlen.');
+}
+const site = siteEntry.data;
+---
+
+<Layout title={page.meta.title} description={page.meta.description}>
+  <Hero hero={page.hero} />
+  <Stats stats={page.stats} />
+  <Services services={page.services} />
+  <Partner partner={page.partner} />
+  <Comparison comparison={page.comparison} />
+  <Process process={page.process} />
+  <Showcase showcase={page.showcase} />
+  <Testimonials testimonials={page.testimonials} />
+  <Faq faq={page.faq} />
+  <Cta cta={page.cta} site={site} />
+  <Contact contact={page.contact} form={page.form} site={site} />
+</Layout>

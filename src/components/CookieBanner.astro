@@ -1,0 +1,87 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  site: CollectionEntry<'site'>['data'];
+}
+
+const { site } = Astro.props;
+const banner = site.ui.cookieBanner;
+---
+
+<div
+  id="cookie-banner"
+  data-cms-section="site"
+  hidden
+  class="fixed inset-x-0 bottom-0 z-[70] p-4 sm:p-6"
+  role="region"
+  aria-label={banner.title}
+>
+  <div
+    class="mx-auto max-w-3xl rounded-3xl bg-ink p-6 text-slate-300 shadow-2xl ring-1 ring-white/10 sm:p-7"
+  >
+    <h2 data-cms-field="ui.cookieBanner.title" class="text-lg text-white">{banner.title}</h2>
+    <p data-cms-field="ui.cookieBanner.text" class="mt-2 text-sm leading-relaxed">
+      {banner.text}
+    </p>
+    <div class="mt-5 flex flex-wrap items-center gap-3">
+      <button
+        type="button"
+        data-consent="essential"
+        data-cms-field="ui.cookieBanner.essentialLabel"
+        class="rounded-xl border-2 border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/50"
+      >
+        {banner.essentialLabel}
+      </button>
+      <button
+        type="button"
+        data-consent="all"
+        data-cms-field="ui.cookieBanner.acceptAllLabel"
+        class="rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-white"
+      >
+        {banner.acceptAllLabel}
+      </button>
+      <a
+        href="/datenschutz"
+        data-cms-field="ui.cookieBanner.privacyLinkLabel"
+        class="text-sm font-medium text-slate-300 underline underline-offset-4 transition hover:text-white"
+      >
+        {banner.privacyLinkLabel}
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const CONSENT_KEY = 'esmatex-consent';
+  const banner = document.getElementById('cookie-banner');
+
+  let hasConsent = false;
+  try {
+    hasConsent = localStorage.getItem(CONSENT_KEY) !== null;
+  } catch {
+    hasConsent = false;
+  }
+
+  if (!hasConsent && banner) {
+    banner.hidden = false;
+  }
+
+  banner?.querySelectorAll('[data-consent]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const consent = button.getAttribute('data-consent') === 'all' ? 'all' : 'essential';
+      try {
+        localStorage.setItem(
+          CONSENT_KEY,
+          JSON.stringify({ consent, ts: new Date().toISOString() })
+        );
+      } catch {
+        /* localStorage nicht verfügbar – Banner bleibt sichtbar */
+      }
+      window.dispatchEvent(new CustomEvent('esma:consent', { detail: { consent } }));
+      if (banner) {
+        banner.hidden = true;
+      }
+    });
+  });
+</script>

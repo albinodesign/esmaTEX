@@ -1,0 +1,62 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+import StarIcon from './icons/StarIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  testimonials: IndexData['testimonials'];
+}
+
+const { testimonials } = Astro.props;
+---
+
+<section data-cms-section="testimonials" class="py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <SectionHeading
+      eyebrow={testimonials.eyebrow}
+      title={testimonials.title}
+      subtitle={testimonials.subtitle}
+      fieldPrefix="testimonials"
+    />
+    <div class="mt-14 grid gap-8 md:grid-cols-3">
+      {
+        testimonials.items.map((item, i) => (
+          <blockquote
+            class="flex flex-col rounded-3xl bg-subtle p-7 ring-1 ring-slate-200/70"
+            data-animate
+            data-animate-delay={String(i * 110)}
+          >
+            <div
+              class="flex items-center gap-1 text-primary-dark"
+              role="img"
+              aria-label={`Bewertung: ${item.rating} von 5 Sternen`}
+            >
+              <span class="flex items-center gap-1" aria-hidden="true">
+                {Array.from({ length: item.rating }).map(() => (
+                  <StarIcon class="h-4 w-4" />
+                ))}
+              </span>
+              <span class="sr-only" data-cms-field={`testimonials.items.${i}.rating`}>
+                {item.rating}
+              </span>
+            </div>
+            <p data-cms-field={`testimonials.items.${i}.quote`} class="mt-4 flex-1 leading-relaxed text-ink">
+              „{item.quote}"
+            </p>
+            <footer class="mt-6 border-t border-slate-300/60 pt-4">
+              <p data-cms-field={`testimonials.items.${i}.author`} class="font-semibold text-ink">
+                {item.author}
+              </p>
+              <p class="mt-0.5 text-sm text-muted">
+                <span data-cms-field={`testimonials.items.${i}.role`}>{item.role}</span> ·{' '}
+                <span data-cms-field={`testimonials.items.${i}.company`}>{item.company}</span>
+              </p>
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </div>
+</section>

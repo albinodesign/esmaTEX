@@ -1,0 +1,40 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  fieldPrefix: string;
+  align?: 'center' | 'left';
+  dark?: boolean;
+}
+
+const { eyebrow, title, subtitle, fieldPrefix, align = 'center', dark = false } = Astro.props;
+---
+
+<div
+  class:list={['max-w-2xl', align === 'center' ? 'mx-auto text-center' : 'text-left']}
+  data-animate
+>
+  <p
+    data-cms-field={`${fieldPrefix}.eyebrow`}
+    class="text-sm font-semibold uppercase tracking-widest text-primary-dark"
+  >
+    {eyebrow}
+  </p>
+  <h2
+    data-cms-field={`${fieldPrefix}.title`}
+    class:list={['mt-3 text-3xl sm:text-4xl', dark ? 'text-white' : 'text-ink']}
+  >
+    {title}
+  </h2>
+  {
+    subtitle && (
+      <p
+        data-cms-field={`${fieldPrefix}.subtitle`}
+        class:list={['mt-4 text-lg leading-relaxed', dark ? 'text-slate-300' : 'text-muted']}
+      >
+        {subtitle}
+      </p>
+    )
+  }
+</div>

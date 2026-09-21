@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import UsersIcon from './icons/UsersIcon.astro';
+import ArrowRightIcon from './icons/ArrowRightIcon.astro';
+
+type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
+
+interface Props {
+  partner: IndexData['partner'];
+}
+
+const { partner } = Astro.props;
+---
+
+<section id="partner" data-cms-section="partner" class="py-16 lg:py-20">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex flex-col items-center gap-8 rounded-3xl bg-ink p-8 text-center sm:p-12"
+      data-animate
+    >
+      <span
+        class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-ink"
+      >
+        <UsersIcon class="h-7 w-7" />
+      </span>
+      <div>
+        <p
+          data-cms-field="partner.eyebrow"
+          class="text-sm font-semibold uppercase tracking-widest text-primary"
+        >
+          {partner.eyebrow}
+        </p>
+        <h2 data-cms-field="partner.title" class="mt-3 text-3xl text-white sm:text-4xl">
+          {partner.title}
+        </h2>
+        <p
+          data-cms-field="partner.text"
+          class="mx-auto mt-4 max-w-2xl leading-relaxed text-slate-300"
+        >
+          {partner.text}
+        </p>
+      </div>
+      <a
+        href={partner.linkHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-ink transition hover:bg-white"
+      >
+        <span data-cms-field="partner.linkLabel">{partner.linkLabel}</span>
+        <ArrowRightIcon class="h-5 w-5" />
+      </a>
+    </div>
+  </div>
+</section>
