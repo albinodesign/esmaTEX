@@ -75,11 +75,11 @@
       },
       {
         "icon": "print",
-        "title": "Moderner Textildruck (DTF & Siebdruck)",
-        "description": "Farbbrillanter Druck für T-Shirts, Hoodies und Sportbekleidung – von der Einzelanfertigung bis zur Großauflage, gestochen scharf und waschbeständig.",
+        "title": "Textildruck: DTF, Flex- & Flockdruck",
+        "description": "Farbbrillanter DTF-Druck, matter Flexdruck und samtiger Flockdruck für T-Shirts, Hoodies und Sportbekleidung – schon ab 1 Stück, gestochen scharf und waschbeständig.",
         "benefits": [
-          "Brillante Farben & feine Details",
-          "Waschbeständig – je nach Verfahren bis 60 °C",
+          "Brillante Farben & feine Details (DTF)",
+          "Waschbeständig bis 60 °C – je nach Verfahren",
           "Schon ab 1 Stück möglich"
         ],
         "image": {
@@ -127,6 +127,10 @@
     "eyebrow": "Starke Partnerschaft",
     "title": "Sportswear von Sport Wilkening – veredelt von esmaTEX",
     "text": "Sport- und Vereinstextilien beziehen wir von unserem Partner Sport Wilkening. Bei uns in Stadthagen veredeln wir sie mit Vereinswappen, Sponsoren-Logos, Namen und Nummern – hochwertig, haltbar und alles aus einer Hand.",
+    "logo": {
+      "src": "/images/partner-wilkening.webp",
+      "alt": "Logo von Sport & Schuh Wilkening"
+    },
     "linkLabel": "sport-wilkening.de besuchen",
     "linkHref": "https://sport-wilkening.de/"
   },
@@ -134,7 +138,7 @@
     "eyebrow": "Verfahrensvergleich",
     "title": "Stick, Druck oder Folie – was passt zu deinem Projekt?",
     "subtitle": "Unsere ehrliche Entscheidungshilfe für Einkäufer, Vereinsvorstände und Inhaber:innen – damit du genau das Verfahren bekommst, das zu Textil, Budget und Einsatz passt.",
-    "columns": ["Kriterium", "Stickerei", "Textildruck (DTF & Siebdruck)", "Werbetechnik & Folie"],
+    "columns": ["Kriterium", "Stickerei", "Textildruck (DTF, Flex & Flock)", "Werbetechnik & Folie"],
     "rows": [
       {
         "label": "Einsatzbereich",
@@ -164,7 +168,7 @@
         "label": "Optimale Stückzahl",
         "values": [
           "Ab 1 Stück, ideal bei 10–500",
-          "Ab 1 Stück (DTF), Siebdruck ab ca. 20",
+          "Ab 1 Stück – alle drei Verfahren",
           "Individuell pro Fahrzeug oder Fläche"
         ]
       },
@@ -276,7 +280,7 @@
       },
       {
         "question": "Gibt es eine Mindestbestellmenge?",
-        "answer": "Nein. Dank moderner DTF-Technik und eigener Stickmaschinen fertigen wir bereits ab 1 Stück – vom einzelnen Musterpolo bis zur Großauflage für den kompletten Betrieb."
+        "answer": "Nein. Dank moderner DTF-, Flex- und Flocktechnik und eigener Stickmaschinen fertigen wir bereits ab 1 Stück – vom einzelnen Musterpolo bis zum kompletten Teamsatz."
       },
       {
         "question": "Wie waschbar sind Druck und Stickerei?",
@@ -319,7 +323,7 @@
     },
     "anfahrt": {
       "title": "Anfahrt",
-      "text": "Du findest unser Atelier in der Bahnhofstr. 65 in 31655 Stadthagen – nur wenige Gehminuten vom Bahnhof Stadthagen entfernt. Parkmöglichkeiten befinden sich in direkter Nähe."
+      "text": "Du findest unser Atelier in der Bahnhofstr. 65 in 31655 Stadthagen – nur wenige Gehminuten vom Bahnhof Stadthagen entfernt. Parkmöglichkeiten gibt es direkt vor Ort."
     }
   },
   "form": {

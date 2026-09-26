@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import UsersIcon from './icons/UsersIcon.astro';
 import ArrowRightIcon from './icons/ArrowRightIcon.astro';
 
 type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
@@ -18,11 +17,15 @@ const { partner } = Astro.props;
       class="flex flex-col items-center gap-8 rounded-3xl bg-ink p-8 text-center sm:p-12"
       data-animate
     >
-      <span
-        class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-ink"
-      >
-        <UsersIcon class="h-7 w-7" />
-      </span>
+      <img
+        src={partner.logo.src}
+        alt={partner.logo.alt}
+        data-cms-field="partner.logo.src"
+        width="1000"
+        height="708"
+        loading="lazy"
+        class="w-full max-w-xs rounded-2xl bg-surface px-6 py-4"
+      />
       <div>
         <p
           data-cms-field="partner.eyebrow"

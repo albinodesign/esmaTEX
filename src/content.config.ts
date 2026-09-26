@@ -163,6 +163,7 @@ const indexPageSchema = z.object({
     eyebrow: z.string(),
     title: z.string(),
     text: z.string(),
+    logo: imageSchema,
     linkLabel: z.string(),
     linkHref: z.string()
   }),

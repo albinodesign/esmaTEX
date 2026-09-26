@@ -763,7 +763,7 @@
         },
         {
           "id": "services.items.1.title",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Überschrift",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Überschrift",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.title",
@@ -771,7 +771,7 @@
         },
         {
           "id": "services.items.1.description",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Beschreibung",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Beschreibung",
           "type": "textarea",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.description",
@@ -779,7 +779,7 @@
         },
         {
           "id": "services.items.1.benefits.0",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 1",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Vorteil 1",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.benefits.0",
@@ -787,7 +787,7 @@
         },
         {
           "id": "services.items.1.benefits.1",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 2",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Vorteil 2",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.benefits.1",
@@ -795,7 +795,7 @@
         },
         {
           "id": "services.items.1.benefits.2",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Vorteil 3",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Vorteil 3",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.benefits.2",
@@ -803,7 +803,7 @@
         },
         {
           "id": "services.items.1.image.src",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Bilddatei",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Bilddatei",
           "type": "image",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.image.src",
@@ -811,7 +811,7 @@
         },
         {
           "id": "services.items.1.image.alt",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Alt-Text",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Alt-Text",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.image.alt",
@@ -819,7 +819,7 @@
         },
         {
           "id": "services.items.1.linkLabel",
-          "label": "Moderner Textildruck (DTF & Siebdruck) – Link-Label",
+          "label": "Moderner Textildruck (DTF, Flex & Flock) – Link-Label",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "services.items.1.linkLabel",
@@ -984,6 +984,22 @@
           "maxLength": 290
         },
         {
+          "id": "partner.logo.src",
+          "label": "Partner-Logo – Bilddatei",
+          "type": "image",
+          "file": "src/content/pages/index.json",
+          "path": "partner.logo.src",
+          "maxLength": 200
+        },
+        {
+          "id": "partner.logo.alt",
+          "label": "Partner-Logo – Alt-Text",
+          "type": "text",
+          "file": "src/content/pages/index.json",
+          "path": "partner.logo.alt",
+          "maxLength": 80
+        },
+        {
           "id": "partner.linkLabel",
           "label": "Link-Label",
           "type": "text",
@@ -1071,7 +1087,7 @@
         },
         {
           "id": "comparison.rows.0.values.1",
-          "label": "Einsatzbereich – Textildruck (DTF & Siebdruck)",
+          "label": "Einsatzbereich – Textildruck (DTF, Flex & Flock)",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "comparison.rows.0.values.1",
@@ -1103,7 +1119,7 @@
         },
         {
           "id": "comparison.rows.1.values.1",
-          "label": "Waschbarkeit & Beständigkeit – Textildruck (DTF & Siebdruck)",
+          "label": "Waschbarkeit & Beständigkeit – Textildruck (DTF, Flex & Flock)",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "comparison.rows.1.values.1",
@@ -1135,7 +1151,7 @@
         },
         {
           "id": "comparison.rows.2.values.1",
-          "label": "Haptik & Optik – Textildruck (DTF & Siebdruck)",
+          "label": "Haptik & Optik – Textildruck (DTF, Flex & Flock)",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "comparison.rows.2.values.1",
@@ -1167,7 +1183,7 @@
         },
         {
           "id": "comparison.rows.3.values.1",
-          "label": "Optimale Stückzahl – Textildruck (DTF & Siebdruck)",
+          "label": "Optimale Stückzahl – Textildruck (DTF, Flex & Flock)",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "comparison.rows.3.values.1",
@@ -1199,7 +1215,7 @@
         },
         {
           "id": "comparison.rows.4.values.1",
-          "label": "Preisgefüge – Textildruck (DTF & Siebdruck)",
+          "label": "Preisgefüge – Textildruck (DTF, Flex & Flock)",
           "type": "text",
           "file": "src/content/pages/index.json",
           "path": "comparison.rows.4.values.1",
