@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import SectionHeading from './SectionHeading.astro';
 import SparklesIcon from './icons/SparklesIcon.astro';
+import ArrowRightIcon from './icons/ArrowRightIcon.astro';
 
 type IndexData = Extract<CollectionEntry<'pages'>['data'], { page: 'index' }>;
 
@@ -18,11 +19,14 @@ const { comparison } = Astro.props;
       eyebrow={comparison.eyebrow}
       title={comparison.title}
       subtitle={comparison.subtitle}
-      fieldPrefix="comparison"
+      fieldPrefix="index.comparison"
     />
     <div
       class="mt-12 overflow-x-auto rounded-2xl bg-surface shadow-sm ring-1 ring-slate-200"
       data-animate
+      tabindex="0"
+      role="region"
+      aria-label={`${comparison.title} — horizontal scrollbar für alle Spalten`}
     >
       <table class="w-full min-w-[760px] border-collapse text-left text-sm">
         <caption class="sr-only">{comparison.title}</caption>
@@ -32,7 +36,7 @@ const { comparison } = Astro.props;
               comparison.columns.map((column, i) => (
                 <th
                   scope="col"
-                  data-cms-field={`comparison.columns.${i}`}
+                  data-cms-field={`index.comparison.columns.${i}`}
                   class="px-5 py-4 font-heading text-sm font-bold"
                 >
                   {column}
@@ -44,16 +48,16 @@ const { comparison } = Astro.props;
         <tbody>
           {
             comparison.rows.map((row, r) => (
-              <tr class="border-t border-slate-200 even:bg-subtle/60">
+              <tr class="border-t border-slate-200 odd:bg-surface even:bg-subtle/60">
                 <th
                   scope="row"
-                  data-cms-field={`comparison.rows.${r}.label`}
-                  class="px-5 py-4 font-semibold text-ink"
+                  data-cms-field={`index.comparison.rows.${r}.label`}
+                  class="sticky left-0 z-10 bg-surface px-5 py-4 font-semibold text-ink shadow-[1px_0_0_0_rgb(226_232_240)]"
                 >
                   {row.label}
                 </th>
                 {row.values.map((value, c) => (
-                  <td data-cms-field={`comparison.rows.${r}.values.${c}`} class="px-5 py-4 text-muted">
+                  <td data-cms-field={`index.comparison.rows.${r}.values.${c}`} class="px-5 py-4 text-muted">
                     {value}
                   </td>
                 ))}
@@ -63,12 +67,16 @@ const { comparison } = Astro.props;
         </tbody>
       </table>
     </div>
+    <p class="mt-3 flex items-center gap-2 text-xs text-muted md:hidden">
+      <ArrowRightIcon class="h-4 w-4 shrink-0 text-primary-dark" />
+      Tabelle seitlich wischen für alle Spalten
+    </p>
     <p
       class="mt-6 flex items-start gap-3 rounded-2xl bg-primary/10 p-5 text-sm font-medium text-ink"
       data-animate
     >
       <SparklesIcon class="h-5 w-5 shrink-0 text-primary-dark" />
-      <span data-cms-field="comparison.note">{comparison.note}</span>
+      <span data-cms-field="index.comparison.note">{comparison.note}</span>
     </p>
   </div>
 </section>

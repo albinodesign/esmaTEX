@@ -15,13 +15,18 @@ if (!siteEntry) {
 const site = siteEntry.data;
 ---
 
-<Layout title={page.meta.title} description={page.meta.description}>
+<Layout
+  title={page.meta.title}
+  description={page.meta.description}
+  cmsTitleField="datenschutz.meta.title"
+  cmsDescriptionField="datenschutz.meta.description"
+>
   <section data-cms-section="datenschutz-header" class="bg-subtle py-14 lg:py-16">
     <div class="mx-auto max-w-3xl px-4 text-center sm:px-6" data-animate>
-      <h1 data-cms-field="header.title" class="text-4xl font-extrabold sm:text-5xl">
+      <h1 data-cms-field="datenschutz.header.title" class="text-4xl font-extrabold sm:text-5xl">
         {page.header.title}
       </h1>
-      <p data-cms-field="header.subtitle" class="mt-3 text-lg text-muted">
+      <p data-cms-field="datenschutz.header.subtitle" class="mt-3 text-lg text-muted">
         {page.header.subtitle}
       </p>
     </div>
@@ -30,24 +35,24 @@ const site = siteEntry.data;
   <section class="py-14 lg:py-16">
     <div class="mx-auto max-w-3xl space-y-12 px-4 sm:px-6">
       <div data-cms-section="datenschutz-controller" data-animate>
-        <h2 data-cms-field="controllerSection.title" class="text-2xl">
+        <h2 data-cms-field="datenschutz.controllersection.title" class="text-2xl">
           {page.controllerSection.title}
         </h2>
-        <p data-cms-field="controllerSection.text" class="mt-3 leading-relaxed text-muted">
+        <p data-cms-field="datenschutz.controllersection.text" class="mt-3 leading-relaxed text-muted">
           {page.controllerSection.text}
         </p>
         <address class="mt-4 rounded-2xl bg-subtle p-6 leading-relaxed text-ink ring-1 ring-slate-200 not-italic">
-          <strong data-cms-field="name">{site.name}</strong> · <span data-cms-field="legalForm">{site.legalForm}</span><br />
+          <strong data-cms-field="name">{site.name}</strong> · <span data-cms-field="legalform">{site.legalForm}</span><br />
           <span data-cms-field="owner">{site.owner}</span><br />
           <span data-cms-field="address.street">{site.address.street}</span><br />
           <span data-cms-field="address.zip">{site.address.zip}</span>
           <span data-cms-field="address.city">{site.address.city}</span><br />
-          <span data-cms-field="controllerSection.phoneLabel">{page.controllerSection.phoneLabel}</span>:
+          <span data-cms-field="datenschutz.controllersection.phonelabel">{page.controllerSection.phoneLabel}</span>:
           <a href={site.phone.href} class="font-medium text-primary-dark transition hover:text-ink">
             <span data-cms-field="phone.display">{site.phone.display}</span>
           </a>
           <br />
-          <span data-cms-field="controllerSection.emailLabel">{page.controllerSection.emailLabel}</span>:
+          <span data-cms-field="datenschutz.controllersection.emaillabel">{page.controllerSection.emailLabel}</span>:
           <a
             href={`mailto:${site.email}`}
             class="font-medium text-primary-dark transition hover:text-ink"
@@ -60,12 +65,12 @@ const site = siteEntry.data;
       {
         page.sections.map((section, i) => (
           <div data-animate>
-            <h2 data-cms-field={`sections.${i}.title`} class="text-2xl">
+            <h2 data-cms-field={`datenschutz.sections.${i}.title`} class="text-2xl">
               {section.title}
             </h2>
             {section.paragraphs.map((paragraph, j) => (
               <p
-                data-cms-field={`sections.${i}.paragraphs.${j}`}
+                data-cms-field={`datenschutz.sections.${i}.paragraphs.${j}`}
                 class="mt-3 leading-relaxed text-muted"
               >
                 {paragraph}
@@ -74,7 +79,7 @@ const site = siteEntry.data;
             {section.list && (
               <ul class="mt-3 list-disc space-y-1.5 pl-6 text-muted">
                 {section.list.map((item, j) => (
-                  <li data-cms-field={`sections.${i}.list.${j}`}>{item}</li>
+                  <li data-cms-field={`datenschutz.sections.${i}.list.${j}`}>{item}</li>
                 ))}
               </ul>
             )}

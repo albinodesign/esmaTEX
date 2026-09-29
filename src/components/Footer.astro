@@ -20,18 +20,19 @@ const year = new Date().getFullYear();
       <img
         src={site.logo}
         alt={site.name}
-        width="800"
-        height="302"
+        data-cms-field="logo"
+        width="480"
+        height="181"
         class="h-14 w-auto rounded-xl"
         loading="lazy"
       />
       <p class="mt-3 text-sm font-semibold text-primary" data-cms-field="slogan">{site.slogan}</p>
       <p class="mt-4 text-sm leading-relaxed" data-cms-field="description">{site.description}</p>
-      <p class="mt-4 text-xs text-slate-400" data-cms-field="footer.madeIn">{site.footer.madeIn}</p>
+      <p class="mt-4 text-xs text-slate-400" data-cms-field="footer.madein">{site.footer.madeIn}</p>
     </div>
 
     <nav aria-label="Leistungen im Footer">
-      <p class="font-heading font-bold text-white" data-cms-field="footer.servicesTitle">
+      <p class="font-heading font-bold text-white" data-cms-field="footer.servicestitle">
         {site.footer.servicesTitle}
       </p>
       <ul class="mt-4 space-y-2.5 text-sm">
@@ -44,7 +45,7 @@ const year = new Date().getFullYear();
     </nav>
 
     <div>
-      <p class="font-heading font-bold text-white" data-cms-field="footer.contactTitle">
+      <p class="font-heading font-bold text-white" data-cms-field="footer.contacttitle">
         {site.footer.contactTitle}
       </p>
       <ul class="mt-4 space-y-3 text-sm">
@@ -79,8 +80,8 @@ const year = new Date().getFullYear();
         {
           site.openingHours.map((entry, i) => (
             <li>
-              <span data-cms-field={`openingHours.${i}.days`}>{entry.days}</span>:{' '}
-              <span data-cms-field={`openingHours.${i}.hours`}>{entry.hours}</span>
+              <span data-cms-field={`openinghours.${i}.days`}>{entry.days}</span>:{' '}
+              <span data-cms-field={`openinghours.${i}.hours`}>{entry.hours}</span>
             </li>
           ))
         }
@@ -88,7 +89,7 @@ const year = new Date().getFullYear();
     </div>
 
     <nav aria-label="Rechtliches im Footer">
-      <p class="font-heading font-bold text-white" data-cms-field="footer.legalTitle">
+      <p class="font-heading font-bold text-white" data-cms-field="footer.legaltitle">
         {site.footer.legalTitle}
       </p>
       <ul class="mt-4 space-y-2.5 text-sm">
@@ -97,7 +98,7 @@ const year = new Date().getFullYear();
             <li>
               <a
                 href={link.href}
-                data-cms-field={`footer.legalLinks.${i}.label`}
+                data-cms-field={`footer.legallinks.${i}.label`}
                 class="transition hover:text-white"
               >
                 {link.label}
@@ -107,8 +108,8 @@ const year = new Date().getFullYear();
         }
       </ul>
       <p class="mt-6 text-xs text-slate-400">
-        <span data-cms-field="owner">{site.owner}</span> · <span data-cms-field="legalForm">{site.legalForm}</span><br />
-        USt-IdNr. <span data-cms-field="vatId">{site.vatId}</span>
+        <span data-cms-field="owner">{site.owner}</span> · <span data-cms-field="legalform">{site.legalForm}</span><br />
+        USt-IdNr. <span data-cms-field="vatid">{site.vatId}</span>
       </p>
     </nav>
   </div>
@@ -119,7 +120,7 @@ const year = new Date().getFullYear();
     >
       <p>
         © {year}
-        <span data-cms-field="name">{site.name}</span> – <span data-cms-field="footer.copyrightNote"
+        <span data-cms-field="name">{site.name}</span> – <span data-cms-field="footer.copyrightnote"
           >{site.footer.copyrightNote}</span
         >
       </p>

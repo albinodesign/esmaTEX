@@ -36,6 +36,7 @@ const formSchema = z.object({
   messageLabel: z.string(),
   messagePlaceholder: z.string(),
   privacyNote: z.string(),
+  privacyLinkLabel: z.string(),
   submitLabel: z.string(),
   successTitle: z.string(),
   successMessage: z.string(),
@@ -81,6 +82,12 @@ const site = defineCollection({
       })
     ),
     openingHoursSchema: z.array(z.string()),
+    /** Hinweis-Banner für das CMS (CMS-REFERENCE.md Abschnitt 8) */
+    banner: z.object({
+      enabled: z.boolean(),
+      variant: z.enum(['vacation', 'emergency', 'info']),
+      text: z.string().max(160)
+    }),
     services: z.array(z.string()),
     areaServed: z.string(),
     social: z.array(

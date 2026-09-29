@@ -21,8 +21,9 @@ const nav = site.navigation;
       <img
         src={site.logo}
         alt={site.name}
-        width="800"
-        height="302"
+        data-cms-field="logo"
+        width="480"
+        height="181"
         class="h-10 w-auto rounded-xl md:h-12"
       />
       <span
@@ -55,7 +56,7 @@ const nav = site.navigation;
       </a>
       <a
         href={nav.ctaHref}
-        data-cms-field="navigation.ctaLabel"
+        data-cms-field="navigation.ctalabel"
         class="hidden rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-ink shadow-md shadow-primary/25 transition hover:bg-primary-dark hover:text-white sm:inline-flex"
       >
         {nav.ctaLabel}
@@ -111,34 +112,42 @@ const nav = site.navigation;
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
 
-  function closeMenu() {
+  let focusBeforeOpen: HTMLElement | null = null;
+
+  function closeMenu(returnFocus = false) {
     if (!toggle || !menu) return;
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', toggle.dataset.openLabel ?? '');
     menu.hidden = true;
     document.getElementById('menu-icon-open')?.classList.remove('hidden');
     document.getElementById('menu-icon-close')?.classList.add('hidden');
+    if (returnFocus) (focusBeforeOpen ?? toggle)?.focus();
+  }
+
+  function openMenu() {
+    if (!toggle || !menu) return;
+    focusBeforeOpen = document.activeElement as HTMLElement | null;
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', toggle.dataset.closeLabel ?? '');
+    menu.hidden = false;
+    document.getElementById('menu-icon-open')?.classList.add('hidden');
+    document.getElementById('menu-icon-close')?.classList.remove('hidden');
+    // Fokus erst im nächsten Frame setzen: im selben Task ignoriert der Browser
+    // .focus() auf einem gerade sichtbar gewordenen Container.
+    requestAnimationFrame(() => menu.querySelector<HTMLElement>('.mobile-link')?.focus());
   }
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+    if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') closeMenu(true);
   });
 
   toggle?.addEventListener('click', () => {
     if (!toggle || !menu) return;
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    if (isOpen) {
-      closeMenu();
-    } else {
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', toggle.dataset.closeLabel ?? '');
-      menu.hidden = false;
-      document.getElementById('menu-icon-open')?.classList.add('hidden');
-      document.getElementById('menu-icon-close')?.classList.remove('hidden');
-    }
+    if (toggle.getAttribute('aria-expanded') === 'true') closeMenu();
+    else openMenu();
   });
 
   menu?.querySelectorAll('.mobile-link').forEach((link) => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', () => closeMenu());
   });
 </script>

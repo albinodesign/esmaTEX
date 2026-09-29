@@ -17,7 +17,11 @@ const { eyebrow, title, subtitle, fieldPrefix, align = 'center', dark = false } 
 >
   <p
     data-cms-field={`${fieldPrefix}.eyebrow`}
-    class="text-sm font-semibold uppercase tracking-widest text-primary-dark"
+    class:list={[
+      'text-sm font-semibold uppercase tracking-widest',
+      // Auf dunklem Grund (Portfolio) ist #1F72A6 zu dunkel (3.4:1) → primary.
+      dark ? 'text-primary' : 'text-primary-dark'
+    ]}
   >
     {eyebrow}
   </p>

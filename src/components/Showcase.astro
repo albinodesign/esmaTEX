@@ -17,7 +17,7 @@ const { showcase } = Astro.props;
       eyebrow={showcase.eyebrow}
       title={showcase.title}
       subtitle={showcase.subtitle}
-      fieldPrefix="showcase"
+      fieldPrefix="index.showcase"
       dark
     />
     <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -31,7 +31,7 @@ const { showcase } = Astro.props;
             <img
               src={item.image.src}
               alt={item.image.alt}
-              data-cms-field={`showcase.items.${i}.image.src`}
+              data-cms-field={`index.showcase.items.${i}.image.src`}
               width="1200"
               height="900"
               loading="lazy"
@@ -39,12 +39,12 @@ const { showcase } = Astro.props;
             />
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 via-ink/60 to-transparent p-5 pt-14">
               <span
-                data-cms-field={`showcase.items.${i}.category`}
+                data-cms-field={`index.showcase.items.${i}.category`}
                 class="inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-ink"
               >
                 {item.category}
               </span>
-              <p data-cms-field={`showcase.items.${i}.title`} class="mt-2 text-sm font-semibold text-white">
+              <p data-cms-field={`index.showcase.items.${i}.title`} class="mt-2 text-sm font-semibold text-white">
                 {item.title}
               </p>
             </figcaption>

@@ -17,7 +17,7 @@ const { process } = Astro.props;
       eyebrow={process.eyebrow}
       title={process.title}
       subtitle={process.subtitle}
-      fieldPrefix="process"
+      fieldPrefix="index.process"
     />
     <ol class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
       {
@@ -32,10 +32,10 @@ const { process } = Astro.props;
                 aria-hidden="true"
               />
             )}
-            <h3 data-cms-field={`process.steps.${i}.title`} class="mt-5 text-xl">
+            <h3 data-cms-field={`index.process.steps.${i}.title`} class="mt-5 text-xl">
               {step.title}
             </h3>
-            <p data-cms-field={`process.steps.${i}.text`} class="mt-3 leading-relaxed text-muted">
+            <p data-cms-field={`index.process.steps.${i}.text`} class="mt-3 leading-relaxed text-muted">
               {step.text}
             </p>
           </li>

@@ -11,9 +11,23 @@ import bodyFontUrl from '../assets/fonts/body.woff2?url';
 interface Props {
   title: string;
   description: string;
+  /** Manifest-ID des Seitentitels (für title/description als CMS-Marker). */
+  cmsTitleField?: string;
+  cmsDescriptionField?: string;
+  /** Fehlerseiten dürfen nicht indexiert werden. */
+  noindex?: boolean;
+  /** Fehlerseiten bekommen kein canonical (nicht Teil der Sitemap). */
+  hideCanonical?: boolean;
 }
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  cmsTitleField,
+  cmsDescriptionField,
+  noindex = false,
+  hideCanonical = false
+} = Astro.props;
 
 const siteEntry = await getEntry('site', 'site');
 if (!siteEntry) {
@@ -28,15 +42,16 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalUrl} />
+    <title data-cms-field={cmsTitleField}>{title}</title>
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+    <meta name="description" content={description} data-cms-field={cmsDescriptionField} />
+    {!hideCanonical && <link rel="canonical" href={canonicalUrl} />}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalUrl} />
+    {!hideCanonical && <meta property="og:url" content={canonicalUrl} />}
     <meta property="og:image" content={`${site.url}/images/hero.webp`} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -49,29 +64,78 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url);
     <SchemaOrg site={site} />
     <script is:inline>
       if (window.self !== window.top) {
-        window.addEventListener('message', (event) => {
-          if (event.data?.type === 'CMS_FIELD_UPDATE') {
-            document
-              .querySelectorAll(`[data-cms-field="${event.data.field}"]`)
-              .forEach((el) => {
-                if (el.tagName === 'IMG') {
-                  el.src = event.data.value;
-                } else {
-                  el.innerText = event.data.value;
-                }
-              });
-          }
+        const CMS_ORIGINS = [
+          "https://agency-cms-teal.vercel.app",
+          "http://localhost:3000",
+        ];
+        let selectMode = true; // true = "Finden", false = "Surfen"
+        // Gemerkte CMS-Herkunft aus geprüften CMS-Nachrichten (stärker als
+        // document.referrer): Nach Navigation über einen In-Preview-Link ist der
+        // Referrer die Website-Seite, der gemerkte Origin bleibt die CMS-Domain.
+        let cmsOrigin = null;
+        let bridgeBereitGemeldet = false;
+        function meldeBridgeBereit() {
+          if (bridgeBereitGemeldet || !cmsOrigin) return;
+          bridgeBereitGemeldet = true;
+          window.parent.postMessage({ type: "CMS_BRIDGE_READY", version: 2 }, cmsOrigin);
+        }
+        window.addEventListener("message", (event) => {
+          if (!CMS_ORIGINS.includes(event.origin)) return;   // 1. Origin
+          if (event.source !== window.parent) return;        // 2. Quelle
+          cmsOrigin = event.origin; meldeBridgeBereit();
+          if (event.data?.type === "CMS_SELECT_MODE") { selectMode = event.data.enabled !== false; return; }
+          if (event.data?.type !== "CMS_FIELD_UPDATE") return;
+          if (typeof event.data.field !== "string" || typeof event.data.value !== "string") return; // 3. Form
+          if (/[<>"'`]/.test(event.data.field)) return;      // 4. keine Injection
+          document.querySelectorAll(`[data-cms-field="${CSS.escape(event.data.field)}"]`).forEach((el) => {
+            if (el.tagName === "IMG") { el.src = event.data.value; el.removeAttribute("srcset"); }
+            else if (el.tagName === "SOURCE") { el.srcset = event.data.value; }
+            else { el.textContent = event.data.value; }
+          });
         });
+        function cmsTargetOrigin() {
+          if (cmsOrigin) return cmsOrigin;
+          try { const ref = new URL(document.referrer); if (CMS_ORIGINS.includes(ref.origin)) return ref.origin; }
+          catch { /* nichts senden */ } return null;
+        }
+        document.addEventListener("click", (event) => {
+          if (!selectMode) return;
+          const el = event.target.closest("[data-cms-field]"); if (!el) return;
+          const target = cmsTargetOrigin(); if (!target) return;
+          event.preventDefault(); event.stopPropagation();
+          document.querySelectorAll(".cms-selected").forEach((n) => n.classList.remove("cms-selected"));
+          el.classList.add("cms-selected");
+          window.parent.postMessage({ type: "CMS_FIELD_SELECT", field: el.getAttribute("data-cms-field") }, target);
+        }, true);
+        const style = document.createElement("style");
+        style.textContent = `[data-cms-field]:hover{outline:2px solid #2563eb;outline-offset:2px;cursor:pointer}.cms-selected{outline:2px solid #2563eb!important;outline-offset:2px}`;
+        document.head.appendChild(style);
       }
     </script>
   </head>
   <body>
     <a
       href="#main"
-      data-cms-field="ui.skipLink"
+      data-cms-field="ui.skiplink"
       class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
       >{site.ui.skipLink}</a
     >
+    {
+      site.banner.enabled && site.banner.text && (
+        <div
+          class:list={[
+            'px-4 py-3 text-center text-sm font-medium',
+            site.banner.variant === 'emergency'
+              ? 'bg-ink text-white'
+              : site.banner.variant === 'vacation'
+                ? 'bg-subtle text-ink'
+                : 'bg-primary text-ink'
+          ]}
+        >
+          {site.banner.text}
+        </div>
+      )
+    }
     <Header site={site} />
     <main id="main">
       <slot />

@@ -20,15 +20,15 @@ const banner = site.ui.cookieBanner;
   <div
     class="mx-auto max-w-3xl rounded-3xl bg-ink p-6 text-slate-300 shadow-2xl ring-1 ring-white/10 sm:p-7"
   >
-    <h2 data-cms-field="ui.cookieBanner.title" class="text-lg text-white">{banner.title}</h2>
-    <p data-cms-field="ui.cookieBanner.text" class="mt-2 text-sm leading-relaxed">
+    <h2 data-cms-field="ui.cookiebanner.title" class="text-lg text-white">{banner.title}</h2>
+    <p data-cms-field="ui.cookiebanner.text" class="mt-2 text-sm leading-relaxed">
       {banner.text}
     </p>
     <div class="mt-5 flex flex-wrap items-center gap-3">
       <button
         type="button"
         data-consent="essential"
-        data-cms-field="ui.cookieBanner.essentialLabel"
+        data-cms-field="ui.cookiebanner.essentiallabel"
         class="rounded-xl border-2 border-white/20 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/50"
       >
         {banner.essentialLabel}
@@ -36,14 +36,14 @@ const banner = site.ui.cookieBanner;
       <button
         type="button"
         data-consent="all"
-        data-cms-field="ui.cookieBanner.acceptAllLabel"
+        data-cms-field="ui.cookiebanner.acceptalllabel"
         class="rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-white"
       >
         {banner.acceptAllLabel}
       </button>
       <a
         href="/datenschutz"
-        data-cms-field="ui.cookieBanner.privacyLinkLabel"
+        data-cms-field="ui.cookiebanner.privacylinklabel"
         class="text-sm font-medium text-slate-300 underline underline-offset-4 transition hover:text-white"
       >
         {banner.privacyLinkLabel}

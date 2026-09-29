@@ -18,7 +18,7 @@ const { faq } = Astro.props;
       eyebrow={faq.eyebrow}
       title={faq.title}
       subtitle={faq.subtitle}
-      fieldPrefix="faq"
+      fieldPrefix="index.faq"
     />
     <div class="mt-12 space-y-4">
       {
@@ -28,10 +28,10 @@ const { faq } = Astro.props;
             data-animate
           >
             <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 font-semibold text-ink">
-              <span data-cms-field={`faq.items.${i}.question`}>{item.question}</span>
+              <span data-cms-field={`index.faq.items.${i}.question`}>{item.question}</span>
               <ChevronDownIcon class="faq-chevron h-5 w-5 shrink-0 text-primary-dark" />
             </summary>
-            <p data-cms-field={`faq.items.${i}.answer`} class="px-6 pb-6 leading-relaxed text-muted">
+            <p data-cms-field={`index.faq.items.${i}.answer`} class="px-6 pb-6 leading-relaxed text-muted">
               {item.answer}
             </p>
           </details>

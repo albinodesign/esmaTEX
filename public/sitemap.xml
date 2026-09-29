@@ -13,3 +13,6 @@
     <priority>0.2</priority>
   </url>
 </urlset>
+<!-- Die 404-Seite ist bewusst NICHT enthalten (noindex) und darf nicht
+     in die Sitemap, damit Suchmaschinen keine Fehlerseite indexieren. -->
+<!-- lastmod wird bei Inhaltsänderungen durch die Agentur gepflegt. -->

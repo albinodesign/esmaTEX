@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "cms:check": "node scripts/cms-check.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",

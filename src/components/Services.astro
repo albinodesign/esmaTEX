@@ -30,7 +30,7 @@ const iconMap = {
       eyebrow={services.eyebrow}
       title={services.title}
       subtitle={services.subtitle}
-      fieldPrefix="services"
+      fieldPrefix="index.services"
     />
     <div class="mt-14 grid gap-8 md:grid-cols-2">
       {
@@ -47,7 +47,7 @@ const iconMap = {
                 <img
                   src={item.image.src}
                   alt={item.image.alt}
-                  data-cms-field={`services.items.${i}.image.src`}
+                  data-cms-field={`index.services.items.${i}.image.src`}
                   width="1200"
                   height="900"
                   loading="lazy"
@@ -59,12 +59,12 @@ const iconMap = {
                   <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary-dark">
                     <Icon class="h-6 w-6" />
                   </span>
-                  <h3 data-cms-field={`services.items.${i}.title`} class="text-xl">
+                  <h3 data-cms-field={`index.services.items.${i}.title`} class="text-xl">
                     {item.title}
                   </h3>
                 </div>
                 <p
-                  data-cms-field={`services.items.${i}.description`}
+                  data-cms-field={`index.services.items.${i}.description`}
                   class="mt-4 leading-relaxed text-muted"
                 >
                   {item.description}
@@ -73,7 +73,7 @@ const iconMap = {
                   {item.benefits.map((benefit, j) => (
                     <li class="flex items-start gap-2.5 text-sm text-ink">
                       <CheckIcon class="mt-0.5 h-4 w-4 shrink-0 text-primary-dark" />
-                      <span data-cms-field={`services.items.${i}.benefits.${j}`}>{benefit}</span>
+                      <span data-cms-field={`index.services.items.${i}.benefits.${j}`}>{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -81,7 +81,7 @@ const iconMap = {
                   href={item.linkHref}
                   class="mt-auto inline-flex items-center gap-2 pt-6 font-semibold text-primary-dark transition hover:gap-3"
                 >
-                  <span data-cms-field={`services.items.${i}.linkLabel`}>{item.linkLabel}</span>
+                  <span data-cms-field={`index.services.items.${i}.linklabel`}>{item.linkLabel}</span>
                   <ArrowRightIcon class="h-4 w-4" />
                 </a>
               </div>

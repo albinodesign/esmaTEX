@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+import ArrowRightIcon from '../components/icons/ArrowRightIcon.astro';
+import PhoneIcon from '../components/icons/PhoneIcon.astro';
+
+const siteEntry = await getEntry('site', 'site');
+if (!siteEntry) {
+  throw new Error('Zentrale Unternehmensdaten fehlen.');
+}
+const site = siteEntry.data;
+
+const title = 'Seite nicht gefunden – esmaTEX';
+const description = `Diese Seite gibt es nicht (mehr). Zur Startseite, zu unseren Leistungen oder direkt zum Kontakt.`;
+---
+
+<Layout title={title} description={description} noindex hideCanonical>
+  <section class="bg-subtle py-20 lg:py-28">
+    <div class="mx-auto max-w-3xl px-4 text-center sm:px-6" data-animate>
+      <p class="text-sm font-semibold uppercase tracking-widest text-primary-dark">Fehler 404</p>
+      <h1 class="mt-4 text-4xl font-extrabold sm:text-5xl">Diese Seite gibt es nicht (mehr)</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted">
+        Möglicherweise wurde die Adresse geändert oder der Link ist alt. Hier geht es zurück:
+      </p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="/"
+          class="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-semibold text-ink shadow-lg shadow-primary/30 transition hover:bg-primary-dark hover:text-white"
+        >
+          <span>Zur Startseite</span>
+          <ArrowRightIcon class="h-5 w-5" />
+        </a>
+        <a
+          href="/#leistungen"
+          class="inline-flex items-center gap-2 rounded-xl border-2 border-ink/10 bg-surface px-6 py-3.5 font-semibold text-ink transition hover:border-primary"
+        >
+          <span>Unsere Leistungen</span>
+        </a>
+      </div>
+      <div class="mt-10 rounded-2xl bg-surface p-6 text-left ring-1 ring-slate-200">
+        <h2 class="text-lg font-bold text-ink">Du suchst etwas Bestimmtes?</h2>
+        <p class="mt-2 text-muted">
+          Melde dich kurz – wir helfen dir direkt weiter:
+        </p>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li class="flex items-center gap-2.5">
+            <PhoneIcon class="h-4 w-4 shrink-0 text-primary-dark" />
+            <a href={site.phone.href} class="font-medium text-primary-dark transition hover:text-ink">
+              {site.phone.display}
+            </a>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <a href={`mailto:${site.email}`} class="font-medium text-primary-dark transition hover:text-ink">
+              {site.email}
+            </a>
+          </li>
+        </ul>
+        <a
+          href="/#kontakt"
+          class="mt-5 inline-flex items-center gap-2 font-semibold text-primary-dark transition hover:gap-3"
+        >
+          <span>Kontaktformular öffnen</span>
+          <ArrowRightIcon class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

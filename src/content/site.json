@@ -32,6 +32,7 @@
     { "days": "Sonntag", "hours": "Geschlossen" }
   ],
   "openingHoursSchema": ["Mo-Fr 09:00-18:00"],
+  "banner": { "enabled": false, "variant": "info", "text": "" },
   "services": [
     "Textilveredelung",
     "Textildruck",

@@ -50,6 +50,27 @@
   h5,
   h6 {
     @apply font-heading font-bold tracking-tight text-ink;
+    /* Lange deutsche Komposita (z. B. "Datenschutzerklärung") dürfen den
+     * Container nicht aufweiten — sonst entsteht horizontales Scrollen
+     * auf 320-px-Geräten. */
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  p,
+  li,
+  dd,
+  dt,
+  td,
+  th,
+  label,
+  a,
+  span,
+  button,
+  input,
+  select,
+  textarea {
+    overflow-wrap: break-word;
   }
 
   :focus-visible {
@@ -114,6 +135,18 @@
 
 .prose-content a {
   @apply font-medium text-primary-dark underline underline-offset-2 hover:text-ink;
+}
+
+/* Zitatzeichen für Kundenstimmen.
+ * Bewusst als Pseudo-Element: data-cms-field sitzt nur auf dem editierbaren
+ * Text, sonst würden die Anführungszeichen bei einer CMS-Vorschau-Aktualisierung
+ * mit überschrieben. */
+.quote-deco::before {
+  content: '\201E';
+}
+
+.quote-deco::after {
+  content: '\201C';
 }
 
 /* FAQ-Akkordeon (native details/summary) */

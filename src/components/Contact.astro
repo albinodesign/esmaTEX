@@ -20,10 +20,10 @@ interface Props {
 const { contact, form, site } = Astro.props;
 
 const infoItems = [
-  { icon: MapPinIcon, label: contact.info.addressLabel, labelField: 'contact.info.addressLabel' },
-  { icon: PhoneIcon, label: contact.info.phoneLabel, labelField: 'contact.info.phoneLabel' },
-  { icon: MailIcon, label: contact.info.emailLabel, labelField: 'contact.info.emailLabel' },
-  { icon: ClockIcon, label: contact.info.hoursLabel, labelField: 'contact.info.hoursLabel' }
+  { icon: MapPinIcon, label: contact.info.addressLabel, labelField: 'index.contact.info.addresslabel' },
+  { icon: PhoneIcon, label: contact.info.phoneLabel, labelField: 'index.contact.info.phonelabel' },
+  { icon: MailIcon, label: contact.info.emailLabel, labelField: 'index.contact.info.emaillabel' },
+  { icon: ClockIcon, label: contact.info.hoursLabel, labelField: 'index.contact.info.hourslabel' }
 ];
 ---
 
@@ -33,12 +33,12 @@ const infoItems = [
       eyebrow={contact.eyebrow}
       title={contact.title}
       subtitle={contact.subtitle}
-      fieldPrefix="contact"
+      fieldPrefix="index.contact"
     />
     <div class="mt-14 grid gap-12 lg:grid-cols-2 lg:gap-10">
       <div data-cms-section="contact-info" data-animate>
-        <h2 data-cms-field="contact.info.title" class="text-2xl">{contact.info.title}</h2>
-        <p data-cms-field="contact.info.text" class="mt-3 leading-relaxed text-muted">
+        <h2 data-cms-field="index.contact.info.title" class="text-2xl">{contact.info.title}</h2>
+        <p data-cms-field="index.contact.info.text" class="mt-3 leading-relaxed text-muted">
           {contact.info.text}
         </p>
 
@@ -50,12 +50,12 @@ const infoItems = [
           </span>
           <div>
             <p
-              data-cms-field="contact.info.personName"
+              data-cms-field="index.contact.info.personname"
               class="font-heading text-lg font-bold text-ink"
             >
               {contact.info.personName}
             </p>
-            <p data-cms-field="contact.info.personRole" class="text-sm text-muted">
+            <p data-cms-field="index.contact.info.personrole" class="text-sm text-muted">
               {contact.info.personRole}
             </p>
           </div>
@@ -72,7 +72,7 @@ const infoItems = [
                   <p data-cms-field={item.labelField} class="text-sm font-semibold text-ink">
                     {item.label}
                   </p>
-                  {item.labelField === 'contact.info.addressLabel' && (
+                  {item.labelField === 'index.contact.info.addresslabel' && (
                     <p class="mt-1 text-muted">
                       <span data-cms-field="address.street">{site.address.street}</span>
                       <br />
@@ -80,7 +80,7 @@ const infoItems = [
                       <span data-cms-field="address.city">{site.address.city}</span>
                     </p>
                   )}
-                  {item.labelField === 'contact.info.phoneLabel' && (
+                  {item.labelField === 'index.contact.info.phonelabel' && (
                     <a
                       href={site.phone.href}
                       class="mt-1 inline-block font-medium text-primary-dark transition hover:text-ink"
@@ -88,7 +88,7 @@ const infoItems = [
                       <span data-cms-field="phone.display">{site.phone.display}</span>
                     </a>
                   )}
-                  {item.labelField === 'contact.info.emailLabel' && (
+                  {item.labelField === 'index.contact.info.emaillabel' && (
                     <a
                       href={`mailto:${site.email}`}
                       class="mt-1 inline-block font-medium text-primary-dark transition hover:text-ink"
@@ -96,17 +96,17 @@ const infoItems = [
                       <span data-cms-field="email">{site.email}</span>
                     </a>
                   )}
-                  {item.labelField === 'contact.info.hoursLabel' && (
+                  {item.labelField === 'index.contact.info.hourslabel' && (
                     <div class="mt-1 text-muted">
                       <ul class="space-y-1">
                         {site.openingHours.map((entry, i) => (
                           <li>
-                            <span data-cms-field={`openingHours.${i}.days`}>{entry.days}</span>:{' '}
-                            <span data-cms-field={`openingHours.${i}.hours`}>{entry.hours}</span>
+                            <span data-cms-field={`openinghours.${i}.days`}>{entry.days}</span>:{' '}
+                            <span data-cms-field={`openinghours.${i}.hours`}>{entry.hours}</span>
                           </li>
                         ))}
                       </ul>
-                      <p data-cms-field="contact.info.hoursNote" class="mt-2 text-sm">
+                      <p data-cms-field="index.contact.info.hoursnote" class="mt-2 text-sm">
                         {contact.info.hoursNote}
                       </p>
                     </div>
@@ -120,11 +120,11 @@ const infoItems = [
         <div class="mt-8 rounded-2xl bg-ink p-6 text-slate-300">
           <div class="flex items-center gap-3">
             <TruckIcon class="h-6 w-6 shrink-0 text-primary" />
-            <h3 data-cms-field="contact.anfahrt.title" class="text-lg text-white">
+            <h3 data-cms-field="index.contact.anfahrt.title" class="text-lg text-white">
               {contact.anfahrt.title}
             </h3>
           </div>
-          <p data-cms-field="contact.anfahrt.text" class="mt-3 text-sm leading-relaxed">
+          <p data-cms-field="index.contact.anfahrt.text" class="mt-3 text-sm leading-relaxed">
             {contact.anfahrt.text}
           </p>
         </div>

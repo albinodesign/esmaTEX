@@ -26,7 +26,12 @@ if (!siteEntry) {
 const site = siteEntry.data;
 ---
 
-<Layout title={page.meta.title} description={page.meta.description}>
+<Layout
+  title={page.meta.title}
+  description={page.meta.description}
+  cmsTitleField="index.meta.title"
+  cmsDescriptionField="index.meta.description"
+>
   <Hero hero={page.hero} />
   <Stats stats={page.stats} />
   <Services services={page.services} />

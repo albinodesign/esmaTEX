@@ -18,13 +18,13 @@ const { stats } = Astro.props;
       stats.items.map((item, i) => (
         <div class="text-center lg:text-left" data-animate data-animate-delay={String(i * 100)}>
           <p class="font-heading text-4xl font-extrabold text-primary sm:text-5xl">
-            <span data-cms-field={`stats.items.${i}.value`}>{item.value}</span>
-            <span data-cms-field={`stats.items.${i}.suffix`}>{item.suffix}</span>
+            <span data-cms-field={`index.stats.items.${i}.value`}>{item.value}</span>
+            <span data-cms-field={`index.stats.items.${i}.suffix`}>{item.suffix}</span>
           </p>
-          <p data-cms-field={`stats.items.${i}.label`} class="mt-2 font-semibold text-white">
+          <p data-cms-field={`index.stats.items.${i}.label`} class="mt-2 font-semibold text-white">
             {item.label}
           </p>
-          <p data-cms-field={`stats.items.${i}.description`} class="mt-1 text-sm text-slate-400">
+          <p data-cms-field={`index.stats.items.${i}.description`} class="mt-1 text-sm text-slate-400">
             {item.description}
           </p>
         </div>

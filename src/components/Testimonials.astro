@@ -18,7 +18,7 @@ const { testimonials } = Astro.props;
       eyebrow={testimonials.eyebrow}
       title={testimonials.title}
       subtitle={testimonials.subtitle}
-      fieldPrefix="testimonials"
+      fieldPrefix="index.testimonials"
     />
     <div class="mt-14 grid gap-8 md:grid-cols-3">
       {
@@ -38,20 +38,20 @@ const { testimonials } = Astro.props;
                   <StarIcon class="h-4 w-4" />
                 ))}
               </span>
-              <span class="sr-only" data-cms-field={`testimonials.items.${i}.rating`}>
+              <span class="sr-only" data-cms-field={`index.testimonials.items.${i}.rating`}>
                 {item.rating}
               </span>
             </div>
-            <p data-cms-field={`testimonials.items.${i}.quote`} class="mt-4 flex-1 leading-relaxed text-ink">
+            <p data-cms-field={`index.testimonials.items.${i}.quote`} class="mt-4 flex-1 leading-relaxed text-ink">
               „{item.quote}"
             </p>
             <footer class="mt-6 border-t border-slate-300/60 pt-4">
-              <p data-cms-field={`testimonials.items.${i}.author`} class="font-semibold text-ink">
+              <p data-cms-field={`index.testimonials.items.${i}.author`} class="font-semibold text-ink">
                 {item.author}
               </p>
               <p class="mt-0.5 text-sm text-muted">
-                <span data-cms-field={`testimonials.items.${i}.role`}>{item.role}</span> ·{' '}
-                <span data-cms-field={`testimonials.items.${i}.company`}>{item.company}</span>
+                <span data-cms-field={`index.testimonials.items.${i}.role`}>{item.role}</span> ·{' '}
+                <span data-cms-field={`index.testimonials.items.${i}.company`}>{item.company}</span>
               </p>
             </footer>
           </blockquote>
